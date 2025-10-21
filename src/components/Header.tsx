@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { Phone, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,36 +42,44 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("hero")}
+            <Link
+              to="/"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Home
-            </button>
-            <button
-              onClick={() => scrollToSection("services")}
+            </Link>
+            <Link
+              to="/themed-parties"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
-              Services
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
+              Themed Parties
+            </Link>
+            <Link
+              to="/about"
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              About Us
+            </Link>
+            <Link
+              to="/contact"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Contact
-            </button>
-            <button
-              onClick={() => scrollToSection("reviews")}
+            </Link>
+            <Link
+              to="/reviews"
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
               Reviews
-            </button>
-            <button
-              onClick={() => scrollToSection("faq")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              FAQ
-            </button>
+            </Link>
+            {isHomePage && (
+              <button
+                onClick={() => scrollToSection("faq")}
+                className="text-foreground hover:text-primary transition-colors font-medium"
+              >
+                FAQ
+              </button>
+            )}
           </nav>
 
           {/* Right Side */}

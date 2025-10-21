@@ -1,4 +1,5 @@
 import { Facebook, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -19,36 +20,36 @@ const Footer = () => {
 
           {/* Navigation */}
           <nav className="flex flex-wrap justify-center gap-6">
-            <button
-              onClick={() => scrollToSection("hero")}
+            <Link
+              to="/"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               Home
-            </button>
-            <button
-              onClick={() => scrollToSection("services")}
+            </Link>
+            <Link
+              to="/themed-parties"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Services
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
+              Themed Parties
+            </Link>
+            <Link
+              to="/about"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              About Us
+            </Link>
+            <Link
+              to="/contact"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               Contact
-            </button>
-            <button
-              onClick={() => scrollToSection("reviews")}
+            </Link>
+            <Link
+              to="/reviews"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               Reviews
-            </button>
-            <button
-              onClick={() => scrollToSection("faq")}
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              FAQ
-            </button>
+            </Link>
           </nav>
 
           {/* Social Media */}
