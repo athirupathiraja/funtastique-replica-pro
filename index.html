@@ -15,6 +15,12 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Performance optimizations -->
+    <link rel="preload" href="/assets/images/funlogo.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="/assets/images/final_pics/mobile/hero.webp" as="image" type="image/webp" media="(max-width: 600px)" />
+    <link rel="preload" href="/assets/images/final_pics/desktop/hero.webp" as="image" type="image/webp" media="(min-width: 601px)" />
+    <link rel="modulepreload" href="/src/main.tsx" />
   </head>
 
   <body>

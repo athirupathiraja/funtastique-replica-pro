@@ -19,6 +19,8 @@ const Hero = () => {
             src="/assets/images/final_pics/desktop/hero.webp" 
             alt="Centre Funtastique interior" 
             className="w-full h-full object-cover"
+            fetchPriority="high"
+            loading="eager"
           />
         </picture>
         {/* Better overlay for text readability */}
