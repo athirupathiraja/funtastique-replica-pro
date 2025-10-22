@@ -10,50 +10,155 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary-light/5 to-secondary/5">
-        {/* Floating shapes */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full animate-float blur-xl"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-primary-light/20 rounded-full animate-float-slow blur-xl"></div>
-        <div className="absolute bottom-40 left-1/4 w-24 h-24 bg-secondary/20 rounded-full animate-float blur-xl" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute top-60 right-1/3 w-16 h-16 bg-primary/30 rounded-full animate-float-slow blur-xl" style={{ animationDelay: "0.5s" }}></div>
-        <div className="absolute bottom-20 right-1/4 w-28 h-28 bg-primary-light/20 rounded-full animate-float blur-xl" style={{ animationDelay: "1.5s" }}></div>
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <picture>
+          <source media="(max-width: 600px)" srcSet="/assets/images/final_pics/mobile/hero.webp" />
+          <source media="(min-width: 601px)" srcSet="/assets/images/final_pics/desktop/hero.webp" />
+          <img 
+            src="/assets/images/final_pics/desktop/hero.webp" 
+            alt="Centre Funtastique interior" 
+            className="w-full h-full object-cover"
+          />
+        </picture>
+        {/* Better overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white/40"></div>
+        {/* Fun pattern overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="w-full h-full" style={{
+            backgroundImage: `radial-gradient(circle at 20% 80%, rgba(255, 106, 62, 0.1) 0%, transparent 50%),
+                             radial-gradient(circle at 80% 20%, rgba(255, 186, 67, 0.1) 0%, transparent 50%),
+                             radial-gradient(circle at 40% 40%, rgba(0, 147, 109, 0.1) 0%, transparent 50%)`
+          }}></div>
+        </div>
+      </div>
+      
+      {/* Fun Decorative Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Balloon Cluster - Top Right */}
+        <div className="absolute top-20 right-8 animate-float" style={{ animationDelay: "0.5s" }}>
+          <div className="w-8 h-12 bg-gradient-to-b from-red-400/80 to-pink-400/70 rounded-full shadow-lg"></div>
+          <div className="w-0.5 h-8 bg-gray-400/60 ml-4"></div>
+        </div>
+        <div className="absolute top-28 right-20 animate-float-slow" style={{ animationDelay: "1s" }}>
+          <div className="w-6 h-10 bg-gradient-to-b from-blue-400/80 to-cyan-400/70 rounded-full shadow-lg"></div>
+          <div className="w-0.5 h-6 bg-gray-400/60 ml-3"></div>
+        </div>
+        <div className="absolute top-16 right-32 animate-float" style={{ animationDelay: "0.8s" }}>
+          <div className="w-7 h-11 bg-gradient-to-b from-yellow-400/80 to-orange-400/70 rounded-full shadow-lg"></div>
+          <div className="w-0.5 h-7 bg-gray-400/60 ml-3.5"></div>
+        </div>
+        <div className="absolute top-32 right-40 animate-float-slow" style={{ animationDelay: "1.5s" }}>
+          <div className="w-5 h-8 bg-gradient-to-b from-green-400/80 to-emerald-400/70 rounded-full shadow-lg"></div>
+          <div className="w-0.5 h-5 bg-gray-400/60 ml-2.5"></div>
+        </div>
+        <div className="absolute top-24 right-48 animate-float" style={{ animationDelay: "2s" }}>
+          <div className="w-6 h-9 bg-gradient-to-b from-purple-400/80 to-pink-400/70 rounded-full shadow-lg"></div>
+          <div className="w-0.5 h-6 bg-gray-400/60 ml-3"></div>
+        </div>
+        
+        {/* Balloon Cluster - Top Left */}
+        <div className="absolute top-24 left-16 animate-float-slow" style={{ animationDelay: "1.2s" }}>
+          <div className="w-7 h-10 bg-gradient-to-b from-pink-400/80 to-red-400/70 rounded-full shadow-lg"></div>
+          <div className="w-0.5 h-7 bg-gray-400/60 ml-3.5"></div>
+        </div>
+        <div className="absolute top-32 left-28 animate-float" style={{ animationDelay: "1.8s" }}>
+          <div className="w-5 h-8 bg-gradient-to-b from-cyan-400/80 to-blue-400/70 rounded-full shadow-lg"></div>
+          <div className="w-0.5 h-5 bg-gray-400/60 ml-2.5"></div>
+        </div>
+        
+        {/* Balloon Cluster - Bottom Right */}
+        <div className="absolute bottom-32 right-16 animate-float" style={{ animationDelay: "2.5s" }}>
+          <div className="w-6 h-9 bg-gradient-to-b from-orange-400/80 to-yellow-400/70 rounded-full shadow-lg"></div>
+          <div className="w-0.5 h-6 bg-gray-400/60 ml-3"></div>
+        </div>
+        <div className="absolute bottom-40 right-28 animate-float-slow" style={{ animationDelay: "3s" }}>
+          <div className="w-5 h-7 bg-gradient-to-b from-green-400/80 to-teal-400/70 rounded-full shadow-lg"></div>
+          <div className="w-0.5 h-5 bg-gray-400/60 ml-2.5"></div>
+        </div>
+        
+        {/* Small floating sparkles */}
+        <div className="absolute top-16 left-20 w-3 h-3 bg-yellow-400/70 transform rotate-45 animate-float shadow-lg">
+          <div className="w-1 h-1 bg-white/80 rounded-full absolute top-0 left-0 animate-ping"></div>
+        </div>
+        <div className="absolute top-40 left-32 w-2 h-2 bg-yellow-400/70 transform rotate-45 animate-float-slow shadow-lg" style={{ animationDelay: "1.5s" }}>
+          <div className="w-0.5 h-0.5 bg-white/80 rounded-full absolute top-0 left-0 animate-ping" style={{ animationDelay: "0.5s" }}></div>
+        </div>
+        <div className="absolute bottom-24 left-40 w-4 h-4 bg-yellow-400/70 transform rotate-45 animate-float shadow-lg" style={{ animationDelay: "2.2s" }}>
+          <div className="w-1 h-1 bg-white/80 rounded-full absolute top-0 left-0 animate-ping" style={{ animationDelay: "1s" }}></div>
+        </div>
+        
+        {/* Small floating hearts */}
+        <div className="absolute bottom-20 left-20 w-4 h-4 bg-pink-400/70 transform rotate-45 animate-float-slow shadow-lg" style={{ animationDelay: "1.8s" }}>
+          <div className="w-2 h-2 bg-pink-400/70 rounded-full absolute -top-0.5 -left-0.5"></div>
+          <div className="w-2 h-2 bg-pink-400/70 rounded-full absolute -top-0.5 -right-0.5"></div>
+        </div>
+        <div className="absolute bottom-32 right-40 w-3 h-3 bg-pink-400/70 transform rotate-45 animate-float shadow-lg" style={{ animationDelay: "2.8s" }}>
+          <div className="w-1.5 h-1.5 bg-pink-400/70 rounded-full absolute -top-0.5 -left-0.5"></div>
+          <div className="w-1.5 h-1.5 bg-pink-400/70 rounded-full absolute -top-0.5 -right-0.5"></div>
+        </div>
+        
+        {/* Shooting Star */}
+        <div className="shooting-star">
+          <svg className="star-shape" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 0L12.2451 6.90983H19.5106L13.6327 11.1803L15.8779 18.0902L10 13.8197L4.12215 18.0902L6.36729 11.1803L0.489435 6.90983H7.75486L10 0Z" fill="white"/>
+          </svg>
+        </div>
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 text-center animate-fade-in">
-        <div className="max-w-4xl mx-auto space-y-8">
-          {/* Logo */}
-          <div className="flex justify-center mb-8">
-            <div className="w-24 h-24 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center shadow-lg">
-              <div className="w-16 h-16 border-8 border-white rounded-full border-r-transparent transform rotate-45"></div>
+      <div className="container mx-auto px-4 relative z-10 animate-fade-in">
+        <div className="max-w-4xl mx-auto space-y-8 text-center">
+          {/* Fun Decorative Card */}
+          <div className="relative inline-block">
+            {/* Card Background - Clean and readable */}
+            <div className="bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl border-2 border-primary/30 relative overflow-hidden">
+              {/* Subtle decorative elements on card - No animations */}
+              <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary/20 rounded-full"></div>
+              <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-secondary/20 rounded-full"></div>
+              <div className="absolute top-4 -left-2 w-3 h-3 bg-primary-light/20 rounded-full"></div>
+              <div className="absolute -top-1 left-4 w-2 h-2 bg-secondary/20 rounded-full"></div>
+              
+              {/* Simple corner decorations */}
+              <div className="absolute top-2 right-2 w-2 h-2 bg-primary/30 transform rotate-45"></div>
+              <div className="absolute bottom-2 left-2 w-1.5 h-1.5 bg-secondary/30 transform rotate-45"></div>
+              
+              {/* Topper */}
+              <div className="text-lg font-bold text-primary uppercase tracking-wider mb-4">
+                Centre FUNtastique
+              </div>
+
+              {/* Main Headline */}
+              <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                <span className="block text-foreground">Private Rental</span>
+                <span className="block text-primary">Space for Children's</span>
+                <span className="block text-foreground">Events</span>
+              </h1>
+
+              {/* Description */}
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto font-medium mb-8">
+                We handle the setup so you can have a <span className="text-primary font-bold bg-primary/10 px-2 py-1 rounded-full">funtastique</span> time.
+              </p>
+
+              {/* CTA Button */}
+              <Button
+                size="lg"
+                onClick={scrollToContact}
+                className="bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-white px-16 py-8 text-xl font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2"
+              >
+                🎉 Get Started 🎉
+              </Button>
             </div>
           </div>
-
-          {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold text-primary mb-4">
-            Centre <span className="text-primary-light">FUN</span>tastique
-          </h1>
-
-          {/* Taglines */}
-          <p className="text-2xl md:text-3xl text-foreground font-semibold mb-2">
-            Private Rental Space for Children's Events
-          </p>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            We handle the setup so you can have a funtastique time.
-          </p>
-
-          {/* CTA Button */}
-          <div className="pt-8">
-            <Button
-              size="lg"
-              onClick={scrollToContact}
-              className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
-            >
-              Get Started
-            </Button>
-          </div>
         </div>
+      </div>
+
+      {/* Curved Bottom Mask */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+        <svg className="relative block w-full h-20 md:h-32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 C300,80 600,80 900,40 C1050,20 1150,0 1200,0 L1200,120 L0,120 Z" fill="white"></path>
+        </svg>
       </div>
     </section>
   );

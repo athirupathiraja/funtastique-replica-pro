@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Check, Users, Calendar } from "lucide-react";
+import { Check, Users, Calendar, Sparkles, Star } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -10,170 +10,162 @@ const ThemeDetail = () => {
   const themeData: Record<string, any> = {
     "frozen-party": {
       name: "Frozen Party",
+      icon: "❄️",
       tagline: "Let It Go Into a Winter Wonderland!",
       description: "Transform our space into Arendelle with this magical Frozen-themed party. Your little ones will feel like they've stepped into Elsa's ice palace, complete with shimmering snowflakes, blue and white décor, and enchanted activities that bring the movie to life.",
-      heroImage: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=1600",
+      color: "from-blue-400 to-cyan-300",
+      accentColor: "blue",
+      image: "/assets/images/final_pics/desktop/frozen_theme.webp",
+      mobileImage: "/assets/images/final_pics/mobile/frozen_theme.webp",
       included: [
         "Custom Frozen backdrop with snowflake decorations",
         "Ice-blue tablecloths and Frozen-themed tableware",
-        "Elsa and Anna character masks for all guests",
-        "Snowflake craft station",
-        "Themed party games led by your host"
+        "Snowflake craft station for creative fun",
+        "Themed party games led by your host",
+        "Optional: Elsa & Anna character appearances (extra cost)"
+      ],
+      activities: [
+        "Build a Snowman craft activity",
+        "Frozen sing-along session",
+        "Ice princess crown decorating",
+        "Snowball toss games"
       ],
       ages: "3-8 Years Old",
       partySize: "Up to 20 children",
-      gallery: [
-        "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800",
-        "https://images.unsplash.com/photo-1481769315321-2c183fcada5d?w=800",
-        "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800",
-        "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800"
-      ]
-    },
-    "superhero-party": {
-      name: "Superhero Party",
-      tagline: "An Action-Packed Adventure!",
-      description: "Calling all heroes! Watch your venue transform into a superhero headquarters where kids can save the day. Complete with cityscape backdrops, comic book decorations, and action-packed activities that will have every child feeling like they have superpowers.",
-      heroImage: "https://images.unsplash.com/photo-1608889335941-32ac5f2041b9?w=1600",
-      included: [
-        "Custom superhero city backdrop & table settings",
-        "Kryptonite slime-making station",
-        "Hero masks and capes for each guest",
-        "Themed party games led by your host",
-        "Comic book style photo props"
-      ],
-      ages: "4-8 Years Old",
-      partySize: "Up to 15 children",
-      gallery: [
-        "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=800",
-        "https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?w=800",
-        "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=800",
-        "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800"
-      ]
-    },
-    "mario-party": {
-      name: "Mario Party",
-      tagline: "Jump Into the Mushroom Kingdom!",
-      description: "It's-a me, Mario! Bring the iconic video game to life with a colorful Mario-themed celebration. From question blocks to fire flowers, your venue will become the ultimate Mushroom Kingdom adventure that kids will never forget.",
-      heroImage: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1600",
-      included: [
-        "Mario-themed backdrop and decorations",
-        "Question block piñata or activity station",
-        "Mario character masks for all guests",
-        "Themed obstacle course games",
-        "Mushroom Kingdom photo booth props"
-      ],
-      ages: "4-10 Years Old",
-      partySize: "Up to 18 children",
-      gallery: [
-        "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800",
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800",
-        "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800",
-        "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800"
-      ]
-    },
-    "paw-patrol-party": {
-      name: "Paw Patrol Party",
-      tagline: "No Job Is Too Big, No Pup Is Too Small!",
-      description: "Join Ryder and the pups on an exciting rescue mission! This Paw Patrol party brings Adventure Bay to life with colorful decorations, rescue-themed activities, and plenty of puppy power fun.",
-      heroImage: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1600",
-      included: [
-        "Paw Patrol backdrop and themed decorations",
-        "Pup badge making station",
-        "Character masks for all the pups",
-        "Rescue mission scavenger hunt",
-        "Themed party games and activities"
-      ],
-      ages: "2-6 Years Old",
-      partySize: "Up to 15 children",
-      gallery: [
-        "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800",
-        "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800",
-        "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=800",
-        "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800"
+      decorElements: [
+        { emoji: "❄️", top: "10%", left: "10%" },
+        { emoji: "⛄", top: "20%", right: "15%" },
+        { emoji: "❄️", bottom: "15%", left: "20%" },
+        { emoji: "✨", top: "60%", right: "10%" },
+        { emoji: "❄️", bottom: "25%", right: "25%" }
       ]
     },
     "princess-party": {
       name: "Princess Party",
+      icon: "👑",
       tagline: "Once Upon a Dream Party!",
-      description: "Every child deserves to feel like royalty! Transform the venue into a magical castle with elegant princess decorations, tiaras, and enchanted activities fit for kings and queens.",
-      heroImage: "https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?w=1600",
+      description: "Every child deserves to feel like royalty! Transform the venue into a magical castle with elegant princess decorations, tiaras, and enchanted activities fit for kings and queens. A fairytale celebration where dreams really do come true.",
+      color: "from-pink-400 to-purple-300",
+      accentColor: "pink",
+      image: "/assets/images/final_pics/desktop/princess_theme.webp",
+      mobileImage: "/assets/images/final_pics/mobile/princess_theme.webp",
       included: [
-        "Castle backdrop and royal decorations",
-        "Tiaras and jewels for all guests",
-        "Princess dress-up accessories",
-        "Royal tea party station",
-        "Enchanted castle photo booth"
+        "Royal castle backdrop and elegant decorations",
+        "Tiaras or crowns for all guests",
+        "Princess-themed tableware and linens",
+        "Royal tea party station setup",
+        "Themed party games and activities"
+      ],
+      activities: [
+        "Crown and tiara decorating station",
+        "Royal ball dance party",
+        "Princess story time",
+        "Magic wand craft making"
       ],
       ages: "3-8 Years Old",
       partySize: "Up to 20 children",
-      gallery: [
-        "https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?w=800",
-        "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800",
-        "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=800",
-        "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=800"
+      decorElements: [
+        { emoji: "👑", top: "10%", left: "10%" },
+        { emoji: "✨", top: "20%", right: "15%" },
+        { emoji: "💎", bottom: "15%", left: "20%" },
+        { emoji: "🏰", top: "60%", right: "10%" },
+        { emoji: "👑", bottom: "25%", right: "25%" }
       ]
     },
-    "dinosaur-party": {
-      name: "Dinosaur Party",
-      tagline: "Roar Into Prehistoric Times!",
-      description: "Travel back millions of years for a dino-mite adventure! This dinosaur party features jungle decorations, fossil activities, and roaring good fun that will thrill any little paleontologist.",
-      heroImage: "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=1600",
-      included: [
-        "Prehistoric jungle backdrop and decorations",
-        "Dinosaur egg hunt activity",
-        "Fossil dig excavation station",
-        "Dino masks for all guests",
-        "Themed stomping games and activities"
-      ],
-      ages: "3-8 Years Old",
-      partySize: "Up to 18 children",
-      gallery: [
-        "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800",
-        "https://images.unsplash.com/photo-1551191848-2b9bc76e7f42?w=800",
-        "https://images.unsplash.com/photo-1596854372407-baba7fef6e51?w=800",
-        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800"
-      ]
-    },
-    "cupcake-decorating-party": {
+    "cupcake-decorating": {
       name: "Cupcake Decorating Party",
+      icon: "🧁",
       tagline: "Sweet Creations & Tasty Fun!",
-      description: "Let your little bakers unleash their creativity! This hands-on cupcake decorating party provides everything needed for kids to frost, sprinkle, and design their own delicious masterpieces.",
-      heroImage: "https://images.unsplash.com/photo-1426869884541-df7117556757?w=1600",
+      description: "Let your little bakers unleash their creativity! This hands-on cupcake decorating party provides everything needed for kids to frost, sprinkle, and design their own delicious masterpieces. Each child becomes a pastry chef for the day!",
+      color: "from-pink-300 to-yellow-200",
+      accentColor: "pink",
+      image: "/assets/images/final_pics/desktop/cupcakes_1.webp",
+      mobileImage: "/assets/images/final_pics/mobile/cupcakes_1.webp",
       included: [
-        "Individual cupcake decorating stations",
-        "Variety of frostings and toppings",
-        "Bakery-themed decorations",
+        "Individual cupcake decorating stations for each child",
+        "Fresh-baked cupcakes ready to decorate",
+        "Variety of colorful frostings and toppings",
         "Chef hats and aprons for all guests",
-        "Take-home boxes for their creations"
+        "Take-home boxes for their sweet creations"
+      ],
+      activities: [
+        "Hands-on cupcake frosting and decorating",
+        "Sprinkle art techniques",
+        "Edible decorations galore",
+        "Cupcake decorating competition (optional)"
       ],
       ages: "4-10 Years Old",
       partySize: "Up to 15 children",
-      gallery: [
-        "https://images.unsplash.com/photo-1426869884541-df7117556757?w=800",
-        "https://images.unsplash.com/photo-1599785209796-786432b228bc?w=800",
-        "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=800",
-        "https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=800"
+      decorElements: [
+        { emoji: "🧁", top: "10%", left: "10%" },
+        { emoji: "🍰", top: "20%", right: "15%" },
+        { emoji: "🎂", bottom: "15%", left: "20%" },
+        { emoji: "🧁", top: "60%", right: "10%" },
+        { emoji: "🍰", bottom: "25%", right: "25%" }
       ]
     },
-    "slime-factory-party": {
-      name: "Slime Factory Party",
-      tagline: "Get Messy and Creative!",
-      description: "Squish, stretch, and create! This slime-making party is perfect for hands-on fun. Kids will mix their own custom slime with endless color and glitter combinations while we handle all the cleanup.",
-      heroImage: "https://images.unsplash.com/photo-1515488764276-beab7607c1e6?w=1600",
+    "bracelet-making": {
+      name: "Bracelet Making Party",
+      icon: "💎",
+      tagline: "Create Friendship & Sparkle!",
+      description: "Design and create beautiful friendship bracelets in this craft-focused celebration! With colorful beads, charms, and endless design possibilities, every child will create unique pieces to take home and share with friends. A perfect party for creative minds!",
+      color: "from-purple-400 to-pink-400",
+      accentColor: "purple",
+      image: "/assets/images/final_pics/desktop/ftq_bracelets.webp",
+      mobileImage: "/assets/images/final_pics/mobile/ftq_bracelets.webp",
       included: [
-        "Individual slime-making stations",
-        "Variety of colors, glitters, and mix-ins",
-        "Science lab themed decorations",
-        "Lab coats for all guests",
-        "Take-home containers for their slime"
+        "Individual bracelet-making stations with all supplies",
+        "Variety of colorful beads, charms, and strings",
+        "Step-by-step instruction from your party host",
+        "Jewelry boxes to take creations home",
+        "Themed decorations and table settings"
+      ],
+      activities: [
+        "Friendship bracelet weaving",
+        "Bead pattern designing",
+        "Charm bracelet creation",
+        "Jewelry design fashion show"
       ],
       ages: "5-10 Years Old",
       partySize: "Up to 15 children",
-      gallery: [
-        "https://images.unsplash.com/photo-1515488764276-beab7607c1e6?w=800",
-        "https://images.unsplash.com/photo-1533093818801-0448d25642f1?w=800",
-        "https://images.unsplash.com/photo-1503551723145-6c040742065b?w=800",
-        "https://images.unsplash.com/photo-1611450403947-3f3c502e1f2c?w=800"
+      decorElements: [
+        { emoji: "💎", top: "10%", left: "10%" },
+        { emoji: "✨", top: "20%", right: "15%" },
+        { emoji: "💍", bottom: "15%", left: "20%" },
+        { emoji: "💎", top: "60%", right: "10%" },
+        { emoji: "✨", bottom: "25%", right: "25%" }
+      ]
+    },
+    "cartoon-party": {
+      name: "Cartoon Party",
+      icon: "🎨",
+      tagline: "Bring Your Favorite Characters to Life!",
+      description: "Jump into a world of colorful fun with a cartoon-themed celebration! Whether it's superheroes, animated friends, or classic cartoons, we'll create a vibrant party atmosphere filled with your child's favorite characters. A customizable theme that matches their unique interests!",
+      color: "from-orange-400 to-red-400",
+      accentColor: "orange",
+      image: "/assets/images/final_pics/desktop/cartoon_theme.webp",
+      mobileImage: "/assets/images/final_pics/mobile/cartoon_theme.webp",
+      included: [
+        "Customizable cartoon character decorations",
+        "Vibrant, colorful table settings and balloons",
+        "Character-themed party games and activities",
+        "Cartoon coloring and craft station",
+        "Photo booth area with cartoon props"
+      ],
+      activities: [
+        "Cartoon character drawing workshop",
+        "Comic book creation station",
+        "Superhero training obstacle course",
+        "Cartoon trivia and games"
+      ],
+      ages: "3-10 Years Old",
+      partySize: "Up to 20 children",
+      decorElements: [
+        { emoji: "🎨", top: "10%", left: "10%" },
+        { emoji: "🎭", top: "20%", right: "15%" },
+        { emoji: "🖍️", bottom: "15%", left: "20%" },
+        { emoji: "🎨", top: "60%", right: "10%" },
+        { emoji: "✨", bottom: "25%", right: "25%" }
       ]
     }
   };
@@ -184,21 +176,76 @@ const ThemeDetail = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Theme Hero */}
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden mt-20">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('${theme.heroImage}')`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black/40"></div>
+      {/* Animated Hero Section */}
+      <section className={`relative pt-32 pb-20 px-4 bg-gradient-to-br ${theme.color} overflow-hidden`}>
+        {/* Floating Decorative Elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {theme.decorElements.map((elem: any, index: number) => (
+            <div
+              key={index}
+              className="absolute text-4xl md:text-6xl opacity-20 animate-float"
+              style={{
+                top: elem.top,
+                bottom: elem.bottom,
+                left: elem.left,
+                right: elem.right,
+                animationDelay: `${index * 0.5}s`
+              }}
+            >
+              {elem.emoji}
+            </div>
+          ))}
+          
+          {/* Sparkles */}
+          {[...Array(6)].map((_, i) => (
+            <div
+              key={`sparkle-${i}`}
+              className="absolute w-2 h-2 bg-white/40 rounded-full animate-ping"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 2}s`
+              }}
+            />
+          ))}
         </div>
         
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-6xl font-bold text-white animate-fade-in">
+        <div className="relative z-10 text-center max-w-4xl mx-auto">
+          <div className="text-9xl mb-6 animate-bounce-slow inline-block">
+            {theme.icon}
+          </div>
+          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 animate-fade-in drop-shadow-lg">
             {theme.name}
           </h1>
+          <p className="text-2xl md:text-3xl text-white/90 font-bold mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            {theme.tagline}
+          </p>
+        </div>
+
+        {/* Wave Separator */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+          <svg className="relative block w-full h-16 md:h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C300,80 600,80 900,40 C1050,20 1150,0 1200,0 L1200,120 L0,120 Z" fill="white"></path>
+          </svg>
+        </div>
+      </section>
+
+      {/* Theme Image Showcase */}
+      <section className="py-12 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl animate-scale-in group">
+            <picture>
+              <source media="(max-width: 600px)" srcSet={theme.mobileImage} />
+              <source media="(min-width: 601px)" srcSet={theme.image} />
+              <img
+                src={theme.image}
+                alt={`${theme.name} decoration example`}
+                className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </picture>
+            {/* Overlay gradient on hover */}
+            <div className={`absolute inset-0 bg-gradient-to-t ${theme.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
+          </div>
         </div>
       </section>
 
@@ -207,80 +254,142 @@ const ThemeDetail = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Left Column - Details */}
-            <div className="lg:col-span-2">
-              <h2 className="text-4xl font-bold text-primary mb-6">
-                {theme.tagline}
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                {theme.description}
-              </p>
+            <div className="lg:col-span-2 space-y-12">
+              {/* Description */}
+              <div className="animate-fade-in">
+                <h2 className="text-3xl font-bold text-foreground mb-4 flex items-center gap-3">
+                  <Sparkles className={`w-8 h-8 text-${theme.accentColor}-500`} />
+                  About This Theme
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {theme.description}
+                </p>
+              </div>
 
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                What's Included
-              </h3>
-              <ul className="space-y-3 mb-8">
-                {theme.included.map((item: string, index: number) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <Check className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Perfect For
-              </h3>
-              <div className="flex flex-wrap gap-6">
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">Ages: {theme.ages}</span>
+              {/* What's Included */}
+              <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                <h3 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
+                  <Star className={`w-8 h-8 text-${theme.accentColor}-500`} />
+                  What's Included
+                </h3>
+                <div className="grid gap-4">
+                  {theme.included.map((item: string, index: number) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-4 p-4 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors animate-fade-in"
+                      style={{ animationDelay: `${0.2 + index * 0.05}s` }}
+                    >
+                      <div className={`flex-shrink-0 w-6 h-6 rounded-full bg-${theme.accentColor}-500 flex items-center justify-center`}>
+                        <Check className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-muted-foreground font-medium">{item}</span>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex items-center gap-2">
-                  <Users className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">Party Size: {theme.partySize}</span>
+              </div>
+
+              {/* Activities */}
+              <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <h3 className="text-3xl font-bold text-foreground mb-6">
+                  Fun Activities
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {theme.activities.map((activity: string, index: number) => (
+                    <div
+                      key={index}
+                      className={`p-6 bg-gradient-to-br ${theme.color} rounded-xl text-white font-semibold text-center transform hover:scale-105 transition-transform animate-scale-in shadow-lg`}
+                      style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+                    >
+                      {activity}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Perfect For */}
+              <div className="animate-fade-in" style={{ animationDelay: '0.5s' }}>
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  Perfect For
+                </h3>
+                <div className="flex flex-wrap gap-6">
+                  <div className="flex items-center gap-3 p-4 bg-muted/30 rounded-xl">
+                    <Calendar className={`w-6 h-6 text-${theme.accentColor}-500`} />
+                    <div>
+                      <div className="text-sm text-muted-foreground">Age Range</div>
+                      <div className="font-bold text-foreground">{theme.ages}</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 p-4 bg-muted/30 rounded-xl">
+                    <Users className={`w-6 h-6 text-${theme.accentColor}-500`} />
+                    <div>
+                      <div className="text-sm text-muted-foreground">Party Size</div>
+                      <div className="font-bold text-foreground">{theme.partySize}</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Right Column - Booking Box */}
             <div className="lg:col-span-1">
-              <div className="bg-muted/30 rounded-2xl p-8 sticky top-24">
-                <h3 className="text-2xl font-bold text-foreground mb-4">
-                  Booking Details
-                </h3>
-                <p className="text-lg text-primary font-semibold mb-2">
-                  Add-on to our Funtastique Package
-                </p>
-                <p className="text-muted-foreground mb-6">
-                  Contact us to add this theme to your party booking!
-                </p>
+              <div className={`bg-gradient-to-br ${theme.color} rounded-2xl p-8 sticky top-24 shadow-2xl animate-scale-in`} style={{ animationDelay: '0.6s' }}>
+                <div className="text-center mb-6">
+                  <div className="text-8xl mb-4 animate-bounce-slow">
+                    {theme.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    Ready to Book?
+                  </h3>
+                  <p className="text-white/90 text-sm">
+                    Add this theme to your Funtastique Package
+                  </p>
+                </div>
+                
+                <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 mb-6">
+                  <div className="text-white/90 text-sm mb-2">Starting at</div>
+                  <div className="text-3xl font-bold text-white mb-1">Contact Us</div>
+                  <div className="text-white/80 text-sm">for custom pricing</div>
+                </div>
+
                 <Link to="/contact">
-                  <Button size="lg" className="w-full bg-primary text-white hover:bg-primary/90">
-                    Book This Theme
+                  <Button size="lg" className="w-full bg-white text-foreground hover:bg-white/90 font-bold text-lg shadow-xl transform hover:scale-105 transition-all">
+                    Book This Theme 🎉
                   </Button>
                 </Link>
+
+                <div className="mt-6 text-center">
+                  <Link to="/themed-parties" className="text-white/90 hover:text-white text-sm underline">
+                    ← Back to All Themes
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Gallery */}
+      {/* Fun Facts Section */}
       <section className="py-20 px-4 bg-muted/20">
-        <div className="container mx-auto max-w-7xl">
-          <h2 className="text-4xl font-bold text-center text-primary mb-12">
-            See The Fun in Action
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl font-bold text-primary mb-8 animate-fade-in">
+            Why Choose {theme.name}?
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {theme.gallery.map((image: string, index: number) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-xl">
-                <img
-                  src={image}
-                  alt={`${theme.name} gallery ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-            ))}
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="text-5xl mb-4">🎈</div>
+              <h3 className="font-bold text-xl mb-2">Stress-Free</h3>
+              <p className="text-muted-foreground">We handle all setup and cleanup</p>
+            </div>
+            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="text-5xl mb-4">✨</div>
+              <h3 className="font-bold text-xl mb-2">Custom Magic</h3>
+              <p className="text-muted-foreground">Tailored to your child's dreams</p>
+            </div>
+            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="text-5xl mb-4">🎉</div>
+              <h3 className="font-bold text-xl mb-2">Unforgettable</h3>
+              <p className="text-muted-foreground">Memories that last a lifetime</p>
+            </div>
           </div>
         </div>
       </section>

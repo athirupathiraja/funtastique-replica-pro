@@ -25,23 +25,29 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "top-0 bg-white shadow-md"
-          : "top-8 bg-white/95 backdrop-blur-sm mx-auto left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-2xl shadow-lg"
+          ? "bg-white shadow-md"
+          : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className={`container mx-auto px-4 py-4 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white"
+          : "bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg mt-4"
+      }`}>
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center">
-              <div className="w-6 h-6 border-4 border-white rounded-full border-r-transparent transform rotate-45"></div>
-            </div>
+            <img 
+              src="/assets/images/funlogo.svg" 
+              alt="Centre Funtastique" 
+              className="h-8 w-auto"
+            />
           </div>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          {/* Navigation - Centered */}
+          <nav className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
             <Link
               to="/"
               className="text-foreground hover:text-primary transition-colors font-medium"
@@ -91,9 +97,6 @@ const Header = () => {
             <div className="hidden lg:flex items-center gap-2 text-foreground">
               <Phone className="w-4 h-4 text-primary" />
               <span className="font-medium">(514) 715-1432</span>
-            </div>
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center">
-              <div className="w-5 h-5 border-3 border-white rounded-full border-r-transparent transform rotate-45"></div>
             </div>
           </div>
         </div>

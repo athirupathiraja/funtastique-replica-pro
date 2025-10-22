@@ -1,18 +1,7 @@
 import { Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
 
 const ReviewsAndContact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
   const reviews = [
     {
       text: "We booked this place for our daughter's bday party and it was absolutely perfect! The space is clean, colorful, and has everything you need. The host was amazing and helped with setup and cleanup. Highly recommend!",
@@ -28,88 +17,39 @@ const ReviewsAndContact = () => {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
-
   return (
     <section id="reviews" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-          {/* Reviews */}
+        <div className="max-w-7xl mx-auto">
+          {/* Reviews - Full Width */}
           <div className="bg-secondary/10 rounded-3xl p-8 lg:p-12 space-y-8 animate-fade-in">
-            <h2 className="text-4xl font-bold text-primary mb-8">Stress FREE Parents</h2>
+            <h2 className="text-4xl font-bold text-primary mb-8 text-center">Stress FREE Parents</h2>
             
-            {reviews.map((review, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow">
-                <Quote className="w-8 h-8 text-primary mb-4" />
-                <p className="text-muted-foreground mb-4 leading-relaxed">{review.text}</p>
-                <div className="flex items-center gap-2">
-                  <div className="flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                    ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {reviews.map((review, index) => (
+                <div key={index} className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                  <Quote className="w-8 h-8 text-primary mb-4" />
+                  <p className="text-muted-foreground mb-4 leading-relaxed">{review.text}</p>
+                  <div className="flex items-center gap-2">
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                      ))}
+                    </div>
+                    <span className="font-semibold text-foreground">{review.author}</span>
                   </div>
-                  <span className="font-semibold text-foreground">{review.author}</span>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
 
-            <Button
-              variant="outline"
-              className="w-full border-primary text-primary hover:bg-primary hover:text-white py-6 text-lg font-semibold rounded-full transition-all"
-            >
-              Read More Reviews
-            </Button>
-          </div>
-
-          {/* Contact Form */}
-          <div id="contact-form" className="bg-secondary rounded-3xl p-8 lg:p-12 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <h2 className="text-4xl font-bold text-white mb-8">Send Us a Message</h2>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <Input
-                placeholder="Name"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                required
-                className="bg-white border-0 py-6 text-lg rounded-xl"
-              />
-              <Input
-                type="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                required
-                className="bg-white border-0 py-6 text-lg rounded-xl"
-              />
-              <Input
-                type="tel"
-                placeholder="Phone"
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                required
-                className="bg-white border-0 py-6 text-lg rounded-xl"
-              />
-              <Textarea
-                placeholder="Write message..."
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                required
-                className="bg-white border-0 py-4 text-lg rounded-xl min-h-[150px]"
-              />
+            <div className="text-center pt-4">
               <Button
-                type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-white py-6 text-lg font-semibold rounded-full transition-all px-8"
               >
-                Send Message
+                Read More Reviews
               </Button>
-            </form>
+            </div>
           </div>
         </div>
       </div>

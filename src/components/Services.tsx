@@ -6,21 +6,29 @@ const Services = () => {
       icon: Building2,
       title: "Private Venue just for your party",
       description: "Enjoy a 1500 sq ft fully private space just for you and your guests—no shared bookings, ever.",
+      image: "/assets/images/final_pics/desktop/centre_white_view.webp",
+      mobileImage: "/assets/images/final_pics/mobile/centre_white_view.webp"
     },
     {
       icon: User,
       title: "Party Host to help with the party",
       description: "Your dedicated host helps with everything from serving food to post-party cleanup so you can relax and enjoy the celebration.",
+      image: "/assets/images/final_pics/desktop/host.webp",
+      mobileImage: "/assets/images/final_pics/mobile/host.webp"
     },
     {
       icon: Sparkles,
       title: "Customized Decorations & Activities",
       description: "Bring your party to life with your child's favorite decorations. We also offer activities like cupcake decorating, ice-cream making, bracelet making for a small extra price.",
+      image: "/assets/images/final_pics/desktop/ftq_cpcake.webp",
+      mobileImage: "/assets/images/final_pics/mobile/ftq_cpcake.webp"
     },
     {
       icon: Tv,
       title: "Includes a Kitchen, TV, Sound System & More",
       description: "Make the most of your event with access to a lot of toys, full kitchen, TV set, sound system, and chairs, tables or anything else you could need.",
+      image: "/assets/images/final_pics/desktop/centre_playground.webp",
+      mobileImage: "/assets/images/final_pics/mobile/centre_playground.webp"
     },
   ];
 
@@ -40,18 +48,33 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in group"
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="w-8 h-8 text-white" />
+              {/* Service Image */}
+              <div className="relative h-48 overflow-hidden">
+                <picture>
+                  <source media="(max-width: 600px)" srcSet={service.mobileImage} />
+                  <source media="(min-width: 601px)" srcSet={service.image} />
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </picture>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
+              
+              <div className="p-6">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
