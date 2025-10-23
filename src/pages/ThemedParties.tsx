@@ -3,8 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useTranslation } from "react-i18next";
 
 const ThemedParties = () => {
+  const { t } = useTranslation();
+  
   const scrollToThemes = () => {
     const element = document.getElementById("themes");
     if (element) {
@@ -15,36 +18,36 @@ const ThemedParties = () => {
   const themes = [
     {
       id: "frozen-party",
-      title: "Frozen Party",
-      description: "An enchanted adventure with Elsa, Anna, and all your favorite friends.",
+      titleKey: "themes.frozen.title",
+      descriptionKey: "themes.frozen.description",
       color: "from-blue-400 to-cyan-300",
       icon: "❄️"
     },
     {
       id: "princess-party",
-      title: "Princess Party",
-      description: "Step into a fairytale kingdom where every child becomes royalty for the day.",
+      titleKey: "themes.princess.title",
+      descriptionKey: "themes.princess.description",
       color: "from-pink-400 to-purple-300",
       icon: "👑"
     },
     {
       id: "cupcake-decorating",
-      title: "Cupcake Decorating",
-      description: "Create sweet memories with hands-on cupcake decorating fun for all.",
+      titleKey: "themes.cupcake.title",
+      descriptionKey: "themes.cupcake.description",
       color: "from-pink-300 to-yellow-200",
       icon: "🧁"
     },
     {
       id: "bracelet-making",
-      title: "Bracelet Making",
-      description: "Design and create beautiful friendship bracelets to take home.",
+      titleKey: "themes.bracelet.title",
+      descriptionKey: "themes.bracelet.description",
       color: "from-purple-400 to-pink-400",
       icon: "💎"
     },
     {
       id: "cartoon-party",
-      title: "Cartoon Party",
-      description: "Bring your child's favorite cartoon characters to life with vibrant decorations.",
+      titleKey: "themes.cartoon.title",
+      descriptionKey: "themes.cartoon.description",
       color: "from-orange-400 to-red-400",
       icon: "🎨"
     }
@@ -106,12 +109,19 @@ const ThemedParties = () => {
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight animate-fade-in">
-            <span className="block text-foreground">Your Child's Dream</span>
-            <span className="block text-primary">Party Starts Here</span>
+            <span className="block text-foreground">{t('themedParties.heroTitle')}</span>
+            <span className="block text-primary">{t('themedParties.heroSubtitle')}</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto font-medium mb-8 animate-fade-in">
-            Explore our magical themes, designed to create <span className="text-primary font-bold">unforgettable memories</span>. We handle the custom decorations and details, you bring the smiles!
+            {t('themedParties.heroDescription').split('unforgettable memories').map((part, i, arr) => (
+              i < arr.length - 1 ? (
+                <span key={i}>
+                  {part}
+                  <span className="text-primary font-bold">unforgettable memories</span>
+                </span>
+              ) : part
+            ))}
           </p>
           
           <Button 
@@ -119,7 +129,7 @@ const ThemedParties = () => {
             size="lg"
             className="bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-white px-16 py-8 text-xl font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 animate-scale-in"
           >
-            🎉 See All Themes 🎉
+            🎉 {t('themedParties.seeAllThemes')} 🎉
             <ArrowDown className="ml-2 w-5 h-5" />
           </Button>
         </div>
@@ -136,7 +146,7 @@ const ThemedParties = () => {
       <section id="themes" className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-primary">
-            Our Funtastique Themes
+            {t('themedParties.sectionTitle')}
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -159,14 +169,14 @@ const ThemedParties = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                    {theme.title}
+                    {t(theme.titleKey)}
                   </h3>
                   <p className="text-muted-foreground mb-6">
-                    {theme.description}
+                    {t(theme.descriptionKey)}
                   </p>
                   <Link to={`/themes/${theme.id}`}>
                     <Button className="w-full bg-primary text-white hover:bg-primary/90 transform hover:scale-105 transition-all">
-                      Learn More →
+                      {t('themedParties.learnMore')} →
                     </Button>
                   </Link>
                 </div>

@@ -1,0 +1,308 @@
+{
+  "nav": {
+    "home": "Home",
+    "themedParties": "Themed Parties",
+    "locations": "Locations",
+    "about": "About Us",
+    "contact": "Contact",
+    "reviews": "Reviews"
+  },
+  "hero": {
+    "topper": "Centre FUNtastique",
+    "title": "Private Rental Space for Children's Events",
+    "text": "We handle the setup so you can have a funtastique time.",
+    "getStarted": "Get Started"
+  },
+  "gallery": {
+    "title": "Our Gallery",
+    "subtitle": "✨ Tap any image for a FUNtastique close-up view of our space & activities! ✨"
+  },
+  "services": {
+    "title": "What's Included in Your Funtastique Package",
+    "description": "We make kids' parties simple, fun, and stress-free for parents. Just bring the cake, food and the kids, we'll handle the rest so you can enjoy the celebration too!",
+    "venue": {
+      "title": "Private Venue just for your party",
+      "description": "Enjoy a 1500 sq ft fully private space just for you and your guests—no shared bookings, ever."
+    },
+    "host": {
+      "title": "Party Host to help with the party",
+      "description": "Your dedicated host helps with everything from serving food to post-party cleanup so you can relax and enjoy the celebration."
+    },
+    "decorations": {
+      "title": "Customized Decorations & Activities",
+      "description": "Bring your party to life with your child's favorite decorations. We also offer activities like cupcake decorating, ice-cream making, bracelet making for a small extra price."
+    },
+    "facilities": {
+      "title": "Includes a Kitchen, TV, Sound System & More",
+      "description": "Make the most of your event with access to a lot of toys, full kitchen, TV set, sound system, and chairs, tables or anything else you could need."
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "text": "Centre Funtastique was started by a mom who knows just how wild (and wonderful) kids' parties can be. Our goal? Make celebrating easy, fun, and totally unforgettable — with all the magic and none of the mess!",
+    "phone": {
+      "label": "Phone",
+      "value": "+1 (514) 715 1432"
+    },
+    "email": {
+      "label": "Email",
+      "value": "centrefuntastique@gmail.com"
+    },
+    "address": {
+      "label": "Address",
+      "value": "3551 Rue Bélair, Montréal, QC H2A 2B1"
+    },
+    "form": {
+      "title": "Make Appointment",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Write message...",
+      "submit": "Send Message"
+    }
+  },
+  "reviews": {
+    "title": "Stress FREE Parents",
+    "submit": "Read More Reviews",
+    "heroTitle": "Don't Just Take",
+    "heroSubtitle": "Our Word For It...",
+    "heroDescription": "See what our happy families have to say about their Funtastique parties! Our greatest joy is seeing your glowing reviews.",
+    "moreReviewsTitle": "More from Our Funtastique Families",
+    "ctaTitle": "Had a Funtastique Time?",
+    "ctaDescription": "We'd love to hear about your experience! New reviews help us and help other parents planning their perfect party.",
+    "ctaButton": "Leave a Review on Google"
+  },
+  "faq": {
+    "topper": "FAQ",
+    "title": "Frequently Asked Questions",
+    "questions": {
+      "q1": {
+        "question": "What is Centre Funtastique?",
+        "answer": "Centre Funtastique is a small and private venue for children's events (maximum capacity of 50 people)."
+      },
+      "q2": {
+        "question": "How much does it cost to host my party at Centre Funtastique?",
+        "answer": "We charge $375 for 3 hours. Currently, we have a special promo: $350 for 4 hours! For an extra cost, you can keep the party going."
+      },
+      "q3": {
+        "question": "What's included in the package?",
+        "answer": "A fully private party! With 1 host (helps with setup, spills, party games etc), access to a fully equipped kitchen (microwave, stove, oven, etc), entertainment system (TV, sound system, chairs, tables), and 5 parking spaces included."
+      },
+      "q4": {
+        "question": "Can I visit the venue before my party?",
+        "answer": "Yes, please contact us to arrange a visit. We can also discuss custom decorations and themes for your party."
+      },
+      "q5": {
+        "question": "Can you make a custom themed party?",
+        "answer": "Yes, we can fully customize the venue for an additional cost. Some examples of themes we have done in the past: Frozen, Mario, Paw Patrol. We also have special activities like bracelet making, cupcake decorations, ice-cream making, etc. You can also rent out our popcorn and snow cone machines!"
+      },
+      "q6": {
+        "question": "Are there any age limits for the venue?",
+        "answer": "Yes, we cater for kids between 1 - 12 years old. But there are no age limits for the parents!"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© Copyright 2025 - Centre Funtastique | Site by Griffin Studios"
+  },
+  "about": {
+    "heroTitle": "From a Mom,",
+    "heroSubtitle": "For Families",
+    "heroDescription": "Learn the story behind Montreal's easiest, most magical party spot.",
+    "storyTitle": "It All Started With a Simple Idea...",
+    "storyParagraph1": "Centre Funtastique was started by a mom who knows just how wild (and wonderful) kids' parties can be. After planning countless parties for her own children, she saw a need for a private, beautiful, and stress-free space where parents could actually enjoy the celebration.",
+    "storyParagraph2": "Our goal is simple: to provide all the magic and fun of a big party, with none of the mess or stress. We handle the details so you can focus on making memories.",
+    "storyParagraph3": "From the first balloon to the last goodbye, we're here to make sure your child's special day is truly unforgettable. Because every family deserves a party that's as fun for the parents as it is for the kids.",
+    "missionTitle": "What We Believe In",
+    "safetyTitle": "Safety First",
+    "safetyDescription": "Our space is designed to be a safe, clean, and secure environment for all our little guests.",
+    "magicTitle": "Creating Magic",
+    "magicDescription": "We believe a party should be a magical escape. Our themes and activities are designed to spark imagination.",
+    "stressFreeTitle": "Stress-Free for Parents",
+    "stressFreeDescription": "Your only job is to show up and have fun. We'll take care of the setup, hosting, and cleanup."
+  },
+  "themedParties": {
+    "heroTitle": "Your Child's Dream",
+    "heroSubtitle": "Party Starts Here",
+    "heroDescription": "Explore our magical themes, designed to create unforgettable memories. We handle the custom decorations and details, you bring the smiles!",
+    "seeAllThemes": "See All Themes",
+    "sectionTitle": "Our Funtastique Themes",
+    "learnMore": "Learn More"
+  },
+  "themes": {
+    "frozen": {
+      "title": "Frozen Party",
+      "description": "An enchanted adventure with Elsa, Anna, and all your favorite friends.",
+      "tagline": "Let It Go Into a Winter Wonderland!",
+      "detailDescription": "Transform our space into Arendelle with this magical Frozen-themed party. Your little ones will feel like they've stepped into Elsa's ice palace, complete with shimmering snowflakes, blue and white décor, and enchanted activities that bring the movie to life.",
+      "included": {
+        "backdrop": "Custom Frozen backdrop with snowflake decorations",
+        "tableware": "Ice-blue tablecloths and Frozen-themed tableware",
+        "crafts": "Snowflake craft station for creative fun",
+        "games": "Themed party games led by your host",
+        "characters": "Optional: Elsa & Anna character appearances (extra cost)"
+      },
+      "activities": {
+        "snowman": "Build a Snowman craft activity",
+        "singalong": "Frozen sing-along session",
+        "crown": "Ice princess crown decorating",
+        "snowball": "Snowball toss games"
+      },
+      "ages": "3-8 Years Old",
+      "partySize": "Up to 20 children"
+    },
+    "princess": {
+      "title": "Princess Party",
+      "description": "Step into a fairytale kingdom where every child becomes royalty for the day.",
+      "tagline": "Once Upon a Dream Party!",
+      "detailDescription": "Every child deserves to feel like royalty! Transform the venue into a magical castle with elegant princess decorations, tiaras, and enchanted activities fit for kings and queens. A fairytale celebration where dreams really do come true.",
+      "included": {
+        "backdrop": "Royal castle backdrop and elegant decorations",
+        "tiaras": "Tiaras or crowns for all guests",
+        "tableware": "Princess-themed tableware and linens",
+        "teaParty": "Royal tea party station setup",
+        "games": "Themed party games and activities"
+      },
+      "activities": {
+        "crowns": "Crown and tiara decorating station",
+        "ball": "Royal ball dance party",
+        "story": "Princess story time",
+        "wands": "Magic wand craft making"
+      },
+      "ages": "3-8 Years Old",
+      "partySize": "Up to 20 children"
+    },
+    "cupcake": {
+      "title": "Cupcake Decorating",
+      "description": "Create sweet memories with hands-on cupcake decorating fun for all.",
+      "tagline": "Sweet Creations & Tasty Fun!",
+      "detailDescription": "Let your little bakers unleash their creativity! This hands-on cupcake decorating party provides everything needed for kids to frost, sprinkle, and design their own delicious masterpieces. Each child becomes a pastry chef for the day!",
+      "included": {
+        "stations": "Individual cupcake decorating stations for each child",
+        "cupcakes": "Fresh-baked cupcakes ready to decorate",
+        "toppings": "Variety of colorful frostings and toppings",
+        "aprons": "Chef hats and aprons for all guests",
+        "boxes": "Take-home boxes for their sweet creations"
+      },
+      "activities": {
+        "frosting": "Hands-on cupcake frosting and decorating",
+        "sprinkles": "Sprinkle art techniques",
+        "decorations": "Edible decorations galore",
+        "competition": "Cupcake decorating competition (optional)"
+      },
+      "ages": "4-10 Years Old",
+      "partySize": "Up to 15 children"
+    },
+    "bracelet": {
+      "title": "Bracelet Making",
+      "description": "Design and create beautiful friendship bracelets to take home.",
+      "tagline": "Create Friendship & Sparkle!",
+      "detailDescription": "Design and create beautiful friendship bracelets in this craft-focused celebration! With colorful beads, charms, and endless design possibilities, every child will create unique pieces to take home and share with friends. A perfect party for creative minds!",
+      "included": {
+        "stations": "Individual bracelet-making stations with all supplies",
+        "beads": "Variety of colorful beads, charms, and strings",
+        "instruction": "Step-by-step instruction from your party host",
+        "boxes": "Jewelry boxes to take creations home",
+        "decorations": "Themed decorations and table settings"
+      },
+      "activities": {
+        "weaving": "Friendship bracelet weaving",
+        "patterns": "Bead pattern designing",
+        "charms": "Charm bracelet creation",
+        "fashionShow": "Jewelry design fashion show"
+      },
+      "ages": "5-10 Years Old",
+      "partySize": "Up to 15 children"
+    },
+    "cartoon": {
+      "title": "Cartoon Party",
+      "description": "Bring your child's favorite cartoon characters to life with vibrant decorations.",
+      "tagline": "Bring Your Favorite Characters to Life!",
+      "detailDescription": "Jump into a world of colorful fun with a cartoon-themed celebration! Whether it's superheroes, animated friends, or classic cartoons, we'll create a vibrant party atmosphere filled with your child's favorite characters. A customizable theme that matches their unique interests!",
+      "included": {
+        "decorations": "Customizable cartoon character decorations",
+        "tableware": "Vibrant, colorful table settings and balloons",
+        "games": "Character-themed party games and activities",
+        "crafts": "Cartoon coloring and craft station",
+        "photoBooth": "Photo booth area with cartoon props"
+      },
+      "activities": {
+        "drawing": "Cartoon character drawing workshop",
+        "comics": "Comic book creation station",
+        "training": "Superhero training obstacle course",
+        "trivia": "Cartoon trivia and games"
+      },
+      "ages": "3-10 Years Old",
+      "partySize": "Up to 20 children"
+    },
+    "common": {
+      "aboutThisTheme": "About This Theme",
+      "whatsIncluded": "What's Included",
+      "funActivities": "Fun Activities",
+      "perfectFor": "Perfect For",
+      "ageRange": "Age Range",
+      "partySize": "Party Size",
+      "readyToBook": "Ready to Book?",
+      "addTheme": "Add this theme to your Funtastique Package",
+      "startingAt": "Starting at",
+      "contactUs": "Contact Us",
+      "forPricing": "for custom pricing",
+      "bookTheme": "Book This Theme",
+      "backToThemes": "← Back to All Themes",
+      "whyChoose": "Why Choose",
+      "stressFree": "Stress-Free",
+      "stressFreeDesc": "We handle all setup and cleanup",
+      "customMagic": "Custom Magic",
+      "customMagicDesc": "Tailored to your child's dreams",
+      "unforgettable": "Unforgettable",
+      "unforgettableDesc": "Memories that last a lifetime"
+    }
+  },
+  "locations": {
+    "heroTitle": "Find Your Perfect",
+    "heroSubtitle": "Party Venue Near You",
+    "heroDescription": "Serving families across Montreal, Laval, and the South Shore with convenient, stress-free kids birthday parties. Browse our service areas below to find detailed information for your neighborhood.",
+    "seeAllLocations": "See All Locations",
+    "sectionTitle": "Where We Serve",
+    "sectionDescription": "Centre Funtastique is conveniently located to serve families throughout the Greater Montreal area. Click on your region to see detailed information and driving distances.",
+    "regions": "Regions",
+    "allRegions": "All Regions",
+    "viewDetails": "View Details",
+    "location": "location",
+    "locations_plural": "locations",
+    "neighborhoods": "Neighborhoods:",
+    "distance": "Distance from venue:",
+    "getDirections": "Get Directions",
+    "learnMore": "Back to All Locations",
+    "whyChooseUs": "Why Choose Centre Funtastique for Kids Birthday Parties in {{location}}?",
+    "whyDescription": "Centre Funtastique is the premier children's birthday party venue serving {{location}} families. We specialize in stress-free kids birthday parties with private venue rental, themed decorations, and professional party hosting - everything you need for an unforgettable children's birthday celebration.",
+    "whatMakesSpecial": "What Makes Centre Funtastique Special",
+    "feature1Title": "Fully Private Venue",
+    "feature1Desc": "1500 sq ft of private space - no shared bookings ever",
+    "feature2Title": "Professional Party Host",
+    "feature2Desc": "Dedicated host handles setup, activities, and cleanup",
+    "feature3Title": "Custom Themed Parties",
+    "feature3Desc": "Frozen, Princess, Cupcake Decorating & more",
+    "feature4Title": "Stress-Free for Parents",
+    "feature4Desc": "We handle everything so you can enjoy the celebration",
+    "servingFamilies": "Serving",
+    "servingAreas": "areas",
+    "bookParty": "Book Your {{location}} Birthday Party",
+    "bookDescription": "Ready to plan a stress-free birthday party your kids will love? Contact Centre Funtastique today to book your private party venue. We serve {{location}} families with convenient access and unforgettable celebrations.",
+    "contactButton": "Contact Us to Book",
+    "detail": {
+      "service1Title": "Private Kids Birthday Party Venue in {{location}}",
+      "service1Desc": "Looking for a children's birthday party venue near {{location}}? Our 1500 sq ft private party space is perfect for kids birthday celebrations with no shared bookings.",
+      "service2Title": "Professional Birthday Party Host",
+      "service2Desc": "Every kids party includes a dedicated party host who manages activities, serves food, and handles cleanup - making your child's birthday stress-free for parents in {{location}}.",
+      "service3Title": "Themed Birthday Party Packages",
+      "service3Desc": "Popular kids birthday themes including Frozen parties, Princess parties, Cupcake decorating, Bracelet making, and custom birthday themes for children in {{location}}.",
+      "service4Title": "Flexible Birthday Party Booking",
+      "service4Desc": "Book your child's birthday party on weekends (10 AM - 8 PM) or weekdays by appointment. Convenient party times for {{location}} families.",
+      "themesTitle": "Popular Kids Birthday Party Themes for {{location}} Children",
+      "themesDesc": "Transform your child's birthday party with our themed party packages! Each children's birthday theme includes custom decorations, age-appropriate activities, and supplies. Perfect for kids birthday celebrations in {{location}}.",
+      "viewAllThemes": "View All Themes"
+    }
+  }
+}
+

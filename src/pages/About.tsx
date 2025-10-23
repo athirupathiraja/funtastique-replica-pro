@@ -1,8 +1,10 @@
 import { Shield, Sparkles, Coffee } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -58,12 +60,19 @@ const About = () => {
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight animate-fade-in">
-            <span className="block text-foreground">From a Mom,</span>
-            <span className="block text-primary">For Families</span>
+            <span className="block text-foreground">{t('about.heroTitle')}</span>
+            <span className="block text-primary">{t('about.heroSubtitle')}</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto font-medium animate-fade-in">
-            Learn the story behind Montreal's <span className="text-primary font-bold">easiest, most magical</span> party spot.
+            {t('about.heroDescription').split('easiest, most magical').map((part, i, arr) => (
+              i < arr.length - 1 ? (
+                <span key={i}>
+                  {part}
+                  <span className="text-primary font-bold">easiest, most magical</span>
+                </span>
+              ) : part
+            ))}
           </p>
         </div>
         
@@ -91,17 +100,17 @@ const About = () => {
             {/* Right Column - Story */}
             <div className="order-1 md:order-2">
               <h2 className="text-4xl font-bold text-primary mb-6">
-                It All Started With a Simple Idea...
+                {t('about.storyTitle')}
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Centre Funtastique was started by a mom who knows just how wild (and wonderful) kids' parties can be. After planning countless parties for her own children, she saw a need for a private, beautiful, and stress-free space where parents could actually enjoy the celebration.
+                  {t('about.storyParagraph1')}
                 </p>
                 <p>
-                  Our goal is simple: to provide all the magic and fun of a big party, with none of the mess or stress. We handle the details so you can focus on making memories.
+                  {t('about.storyParagraph2')}
                 </p>
                 <p>
-                  From the first balloon to the last goodbye, we're here to make sure your child's special day is truly unforgettable. Because every family deserves a party that's as fun for the parents as it is for the kids.
+                  {t('about.storyParagraph3')}
                 </p>
               </div>
             </div>
@@ -113,7 +122,7 @@ const About = () => {
       <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16">
-            What We Believe In
+            {t('about.missionTitle')}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -123,10 +132,10 @@ const About = () => {
                 <Shield className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Safety First
+                {t('about.safetyTitle')}
               </h3>
               <p className="text-muted-foreground">
-                Our space is designed to be a safe, clean, and secure environment for all our little guests.
+                {t('about.safetyDescription')}
               </p>
             </div>
 
@@ -136,10 +145,10 @@ const About = () => {
                 <Sparkles className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Creating Magic
+                {t('about.magicTitle')}
               </h3>
               <p className="text-muted-foreground">
-                We believe a party should be a magical escape. Our themes and activities are designed to spark imagination.
+                {t('about.magicDescription')}
               </p>
             </div>
 
@@ -149,10 +158,10 @@ const About = () => {
                 <Coffee className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Stress-Free for Parents
+                {t('about.stressFreeTitle')}
               </h3>
               <p className="text-muted-foreground">
-                Your only job is to show up and have fun. We'll take care of the setup, hosting, and cleanup.
+                {t('about.stressFreeDescription')}
               </p>
             </div>
           </div>

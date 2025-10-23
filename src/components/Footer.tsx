@@ -1,7 +1,10 @@
 import { Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -24,31 +27,31 @@ const Footer = () => {
               to="/"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Home
+              {t('nav.home')}
             </Link>
             <Link
               to="/themed-parties"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Themed Parties
+              {t('nav.themedParties')}
             </Link>
             <Link
               to="/about"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              About Us
+              {t('nav.about')}
             </Link>
             <Link
               to="/contact"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Contact
+              {t('nav.contact')}
             </Link>
             <Link
               to="/reviews"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Reviews
+              {t('nav.reviews')}
             </Link>
           </nav>
 
@@ -72,7 +75,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-muted-foreground text-sm text-center">
-            © Copyright 2025 - Centre Funtastique | Site by Griffin Studios
+            {t('footer.copyright')}
           </p>
         </div>
       </div>

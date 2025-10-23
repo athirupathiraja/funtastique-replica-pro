@@ -1,0 +1,308 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "themedParties": "Fêtes Thématiques",
+    "locations": "Emplacements",
+    "about": "À Propos",
+    "contact": "Contact",
+    "reviews": "Avis"
+  },
+  "hero": {
+    "topper": "Centre FUNtastique",
+    "title": "Espace de location privé pour événements aux enfants",
+    "text": "Nous nous occupons de l'installation pour que vous puissiez passer un moment funtastique.",
+    "getStarted": "Commencer"
+  },
+  "gallery": {
+    "title": "Notre Galerie",
+    "subtitle": "✨ Appuyez sur n'importe quelle image pour une vue rapprochée FUNtastique de notre espace et nos activités ! ✨"
+  },
+  "services": {
+    "title": "Ce qui est inclus dans votre forfait Funtastique",
+    "description": "Nous simplifions les fêtes d'enfants, les rendons amusantes et sans stress pour les parents. Apportez simplement le gâteau, la nourriture et les enfants, nous nous occupons du reste pour que vous puissiez également profiter de la célébration !",
+    "venue": {
+      "title": "Lieu privé juste pour votre fête",
+      "description": "Profitez d'un espace de 1500 pieds carrés entièrement privé juste pour vous et vos invités—aucune réservation partagée, jamais."
+    },
+    "host": {
+      "title": "Hôte de fête pour aider avec la fête",
+      "description": "Votre hôte dédié aide avec tout, de la distribution de la nourriture au nettoyage après la fête, afin que vous puissiez vous détendre et profiter de la célébration."
+    },
+    "decorations": {
+      "title": "Décorations et activités personnalisées",
+      "description": "Donnez vie à votre fête avec les décorations préférées de votre enfant. Nous proposons également des activités comme la décoration de cupcakes, la fabrication de glaces, la fabrication de bracelets pour un petit prix supplémentaire."
+    },
+    "facilities": {
+      "title": "Cuisine, télévision, système audio et plus",
+      "description": "Profitez au maximum de votre événement avec accès à de nombreux jouets, une cuisine complète, un téléviseur, un système audio, et des chaises, tables ou tout autre équipement dont vous pourriez avoir besoin."
+    }
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "text": "Le Centre Funtastique a été créé par une maman qui sait à quel point les fêtes d'enfants peuvent être sauvages (et merveilleuses). Notre objectif ? Rendre la célébration facile, amusante et totalement inoubliable — avec toute la magie et sans le désordre !",
+    "phone": {
+      "label": "Téléphone",
+      "value": "+1 (514) 715 1432"
+    },
+    "email": {
+      "label": "Courriel",
+      "value": "centrefuntastique@gmail.com"
+    },
+    "address": {
+      "label": "Adresse",
+      "value": "3551 Rue Bélair, Montréal, QC H2A 2B1"
+    },
+    "form": {
+      "title": "Prendre Rendez-vous",
+      "name": "Nom",
+      "email": "Courriel",
+      "phone": "Téléphone",
+      "message": "Écrivez votre message...",
+      "submit": "Envoyer le Message"
+    }
+  },
+  "reviews": {
+    "title": "Parents SANS Stress",
+    "submit": "Lire plus d'avis",
+    "heroTitle": "Ne nous croyez pas",
+    "heroSubtitle": "Sur parole...",
+    "heroDescription": "Voyez ce que nos familles heureuses ont à dire sur leurs fêtes Funtastiques ! Notre plus grande joie est de voir vos avis élogieux.",
+    "moreReviewsTitle": "Plus de nos familles Funtastiques",
+    "ctaTitle": "Avez-vous passé un moment Funtastique?",
+    "ctaDescription": "Nous aimerions entendre parler de votre expérience ! De nouveaux avis nous aident et aident d'autres parents à planifier leur fête parfaite.",
+    "ctaButton": "Laisser un avis sur Google"
+  },
+  "faq": {
+    "topper": "FAQ",
+    "title": "Questions Fréquemment Posées",
+    "questions": {
+      "q1": {
+        "question": "Qu'est-ce que le Centre Funtastique?",
+        "answer": "Le Centre Funtastique est un petit lieu privé pour les événements pour enfants (capacité maximale de 50 personnes)."
+      },
+      "q2": {
+        "question": "Combien coûte l'organisation de ma fête au Centre Funtastique?",
+        "answer": "Nous facturons 375 $ pour 3 heures. Actuellement, nous avons une promotion spéciale : 350 $ pour 4 heures ! Pour un coût supplémentaire, vous pouvez prolonger la fête."
+      },
+      "q3": {
+        "question": "Qu'est-ce qui est inclus dans le forfait?",
+        "answer": "Une fête entièrement privée ! Avec 1 hôte (aide à l'installation, aux déversements, aux jeux de fête, etc.), accès à une cuisine entièrement équipée (micro-ondes, cuisinière, four, etc.), système de divertissement (télévision, système audio, chaises, tables), et 5 places de parking incluses."
+      },
+      "q4": {
+        "question": "Puis-je visiter le lieu avant ma fête?",
+        "answer": "Oui, veuillez nous contacter pour organiser une visite. Nous pouvons également discuter des décorations et thèmes personnalisés pour votre fête."
+      },
+      "q5": {
+        "question": "Pouvez-vous organiser une fête à thème personnalisée?",
+        "answer": "Oui, nous pouvons entièrement personnaliser le lieu pour un coût supplémentaire. Voici quelques exemples de thèmes que nous avons réalisés par le passé : Frozen, Mario, Paw Patrol. Nous proposons également des activités spéciales comme la fabrication de bracelets, la décoration de cupcakes, la fabrication de glaces, etc. Vous pouvez également louer nos machines à pop-corn et à neige !"
+      },
+      "q6": {
+        "question": "Y a-t-il des limites d'âge pour le lieu?",
+        "answer": "Oui, nous accueillons les enfants de 1 à 12 ans. Mais il n'y a pas de limite d'âge pour les parents !"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© Copyright 2025 - Centre Funtastique | Site par Griffin Studios"
+  },
+  "about": {
+    "heroTitle": "D'une maman,",
+    "heroSubtitle": "Pour les familles",
+    "heroDescription": "Découvrez l'histoire derrière le lieu de fête le plus facile et magique de Montréal.",
+    "storyTitle": "Tout a commencé par une idée simple...",
+    "storyParagraph1": "Le Centre Funtastique a été créé par une maman qui sait à quel point les fêtes d'enfants peuvent être sauvages (et merveilleuses). Après avoir organisé d'innombrables fêtes pour ses propres enfants, elle a vu le besoin d'un espace privé, magnifique et sans stress où les parents pourraient réellement profiter de la célébration.",
+    "storyParagraph2": "Notre objectif est simple : fournir toute la magie et le plaisir d'une grande fête, sans le désordre ni le stress. Nous gérons les détails pour que vous puissiez vous concentrer sur la création de souvenirs.",
+    "storyParagraph3": "Du premier ballon au dernier au revoir, nous sommes là pour nous assurer que le jour spécial de votre enfant soit vraiment inoubliable. Parce que chaque famille mérite une fête aussi amusante pour les parents que pour les enfants.",
+    "missionTitle": "Ce en quoi nous croyons",
+    "safetyTitle": "La sécurité d'abord",
+    "safetyDescription": "Notre espace est conçu pour être un environnement sûr, propre et sécurisé pour tous nos petits invités.",
+    "magicTitle": "Créer de la magie",
+    "magicDescription": "Nous croyons qu'une fête devrait être une évasion magique. Nos thèmes et activités sont conçus pour stimuler l'imagination.",
+    "stressFreeTitle": "Sans stress pour les parents",
+    "stressFreeDescription": "Votre seul travail est de vous présenter et de vous amuser. Nous nous occuperons de l'installation, de l'animation et du nettoyage."
+  },
+  "themedParties": {
+    "heroTitle": "Le rêve de votre enfant",
+    "heroSubtitle": "La fête commence ici",
+    "heroDescription": "Explorez nos thèmes magiques, conçus pour créer des souvenirs inoubliables. Nous nous occupons des décorations et des détails personnalisés, vous apportez les sourires !",
+    "seeAllThemes": "Voir tous les thèmes",
+    "sectionTitle": "Nos thèmes Funtastiques",
+    "learnMore": "En savoir plus"
+  },
+  "themes": {
+    "frozen": {
+      "title": "Fête Frozen",
+      "description": "Une aventure enchantée avec Elsa, Anna et tous vos amis préférés.",
+      "tagline": "Laissez-vous aller dans un pays des merveilles hivernal !",
+      "detailDescription": "Transformez notre espace en Arendelle avec cette fête magique sur le thème de Frozen. Vos petits auront l'impression d'être entrés dans le palais de glace d'Elsa, avec des flocons de neige scintillants, un décor bleu et blanc, et des activités enchantées qui donnent vie au film.",
+      "included": {
+        "backdrop": "Toile de fond Frozen personnalisée avec décorations de flocons de neige",
+        "tableware": "Nappes bleu glace et vaisselle sur le thème Frozen",
+        "crafts": "Station de bricolage de flocons de neige pour s'amuser créativement",
+        "games": "Jeux de fête à thème animés par votre hôte",
+        "characters": "Optionnel : Apparitions des personnages Elsa et Anna (coût supplémentaire)"
+      },
+      "activities": {
+        "snowman": "Activité de bricolage : construire un bonhomme de neige",
+        "singalong": "Séance de chant Frozen",
+        "crown": "Décoration de couronne de princesse des glaces",
+        "snowball": "Jeux de lancer de boules de neige"
+      },
+      "ages": "3-8 ans",
+      "partySize": "Jusqu'à 20 enfants"
+    },
+    "princess": {
+      "title": "Fête Princesse",
+      "description": "Entrez dans un royaume de conte de fées où chaque enfant devient royauté pour la journée.",
+      "tagline": "Une fête de rêve !",
+      "detailDescription": "Chaque enfant mérite de se sentir comme de la royauté ! Transformez le lieu en un château magique avec d'élégantes décorations de princesse, des diadèmes et des activités enchantées dignes de rois et de reines. Une célébration de conte de fées où les rêves deviennent vraiment réalité.",
+      "included": {
+        "backdrop": "Toile de fond de château royal et décorations élégantes",
+        "tiaras": "Diadèmes ou couronnes pour tous les invités",
+        "tableware": "Vaisselle et linge de table sur le thème princesse",
+        "teaParty": "Installation d'un goûter royal",
+        "games": "Jeux de fête et activités à thème"
+      },
+      "activities": {
+        "crowns": "Station de décoration de couronnes et diadèmes",
+        "ball": "Bal royal et fête dansante",
+        "story": "Heure du conte de princesse",
+        "wands": "Fabrication de baguettes magiques"
+      },
+      "ages": "3-8 ans",
+      "partySize": "Jusqu'à 20 enfants"
+    },
+    "cupcake": {
+      "title": "Décoration de Cupcakes",
+      "description": "Créez de doux souvenirs avec une activité pratique de décoration de cupcakes pour tous.",
+      "tagline": "Créations sucrées et plaisir savoureux !",
+      "detailDescription": "Laissez vos petits pâtissiers libérer leur créativité ! Cette fête de décoration de cupcakes pratique fournit tout le nécessaire pour que les enfants glacent, saupoudrent et conçoivent leurs propres chefs-d'œuvre délicieux. Chaque enfant devient pâtissier pour la journée !",
+      "included": {
+        "stations": "Stations individuelles de décoration de cupcakes pour chaque enfant",
+        "cupcakes": "Cupcakes fraîchement cuits prêts à décorer",
+        "toppings": "Variété de glaçages et garnitures colorés",
+        "aprons": "Toques et tabliers de chef pour tous les invités",
+        "boxes": "Boîtes à emporter pour leurs créations sucrées"
+      },
+      "activities": {
+        "frosting": "Glaçage et décoration de cupcakes pratiques",
+        "sprinkles": "Techniques d'art aux paillettes",
+        "decorations": "Décorations comestibles à gogo",
+        "competition": "Concours de décoration de cupcakes (optionnel)"
+      },
+      "ages": "4-10 ans",
+      "partySize": "Jusqu'à 15 enfants"
+    },
+    "bracelet": {
+      "title": "Fabrication de Bracelets",
+      "description": "Concevez et créez de beaux bracelets d'amitié à ramener à la maison.",
+      "tagline": "Créez de l'amitié et des étincelles !",
+      "detailDescription": "Concevez et créez de beaux bracelets d'amitié lors de cette célébration axée sur l'artisanat ! Avec des perles colorées, des breloques et des possibilités de design infinies, chaque enfant créera des pièces uniques à ramener à la maison et à partager avec des amis. Une fête parfaite pour les esprits créatifs !",
+      "included": {
+        "stations": "Stations individuelles de fabrication de bracelets avec toutes les fournitures",
+        "beads": "Variété de perles colorées, breloques et fils",
+        "instruction": "Instructions étape par étape de votre hôte de fête",
+        "boxes": "Boîtes à bijoux pour ramener les créations à la maison",
+        "decorations": "Décorations et décors de table à thème"
+      },
+      "activities": {
+        "weaving": "Tissage de bracelets d'amitié",
+        "patterns": "Conception de motifs de perles",
+        "charms": "Création de bracelets à breloques",
+        "fashionShow": "Défilé de mode de créations de bijoux"
+      },
+      "ages": "5-10 ans",
+      "partySize": "Jusqu'à 15 enfants"
+    },
+    "cartoon": {
+      "title": "Fête Dessin Animé",
+      "description": "Donnez vie aux personnages de dessins animés préférés de votre enfant avec des décorations vibrantes.",
+      "tagline": "Donnez vie à vos personnages préférés !",
+      "detailDescription": "Plongez dans un monde de plaisir coloré avec une célébration sur le thème des dessins animés ! Qu'il s'agisse de super-héros, d'amis animés ou de dessins animés classiques, nous créerons une atmosphère de fête vibrante remplie des personnages préférés de votre enfant. Un thème personnalisable qui correspond à leurs intérêts uniques !",
+      "included": {
+        "decorations": "Décorations de personnages de dessins animés personnalisables",
+        "tableware": "Décors de table et ballons vibrants et colorés",
+        "games": "Jeux de fête et activités sur le thème des personnages",
+        "crafts": "Station de coloriage et d'artisanat de dessins animés",
+        "photoBooth": "Espace photomaton avec accessoires de dessins animés"
+      },
+      "activities": {
+        "drawing": "Atelier de dessin de personnages de dessins animés",
+        "comics": "Station de création de bandes dessinées",
+        "training": "Parcours d'obstacles d'entraînement de super-héros",
+        "trivia": "Quiz et jeux sur les dessins animés"
+      },
+      "ages": "3-10 ans",
+      "partySize": "Jusqu'à 20 enfants"
+    },
+    "common": {
+      "aboutThisTheme": "À propos de ce thème",
+      "whatsIncluded": "Ce qui est inclus",
+      "funActivities": "Activités amusantes",
+      "perfectFor": "Parfait pour",
+      "ageRange": "Tranche d'âge",
+      "partySize": "Taille de la fête",
+      "readyToBook": "Prêt à réserver?",
+      "addTheme": "Ajoutez ce thème à votre forfait Funtastique",
+      "startingAt": "À partir de",
+      "contactUs": "Contactez-nous",
+      "forPricing": "pour les tarifs personnalisés",
+      "bookTheme": "Réserver ce thème",
+      "backToThemes": "← Retour à tous les thèmes",
+      "whyChoose": "Pourquoi choisir",
+      "stressFree": "Sans stress",
+      "stressFreeDesc": "Nous gérons toute l'installation et le nettoyage",
+      "customMagic": "Magie personnalisée",
+      "customMagicDesc": "Adapté aux rêves de votre enfant",
+      "unforgettable": "Inoubliable",
+      "unforgettableDesc": "Des souvenirs qui durent toute une vie"
+    }
+  },
+  "locations": {
+    "heroTitle": "Trouvez votre",
+    "heroSubtitle": "Lieu de fête parfait près de chez vous",
+    "heroDescription": "Au service des familles de Montréal, Laval et de la Rive-Sud avec des fêtes d'anniversaire pour enfants pratiques et sans stress. Parcourez nos zones de service ci-dessous pour trouver des informations détaillées pour votre quartier.",
+    "seeAllLocations": "Voir tous les emplacements",
+    "sectionTitle": "Où nous servons",
+    "sectionDescription": "Le Centre Funtastique est idéalement situé pour servir les familles dans toute la région du Grand Montréal. Cliquez sur votre région pour voir des informations détaillées et les distances de conduite.",
+    "regions": "Régions",
+    "allRegions": "Toutes les régions",
+    "viewDetails": "Voir les détails",
+    "location": "emplacement",
+    "locations_plural": "emplacements",
+    "neighborhoods": "Quartiers:",
+    "distance": "Distance du lieu:",
+    "getDirections": "Obtenir l'itinéraire",
+    "learnMore": "Retour à tous les emplacements",
+    "whyChooseUs": "Pourquoi choisir le Centre Funtastique pour les fêtes d'anniversaire pour enfants à {{location}}?",
+    "whyDescription": "Le Centre Funtastique est le lieu de fête d'anniversaire pour enfants de premier ordre au service des familles de {{location}}. Nous nous spécialisons dans les fêtes d'anniversaire pour enfants sans stress avec location de lieu privé, décorations thématiques et animation professionnelle - tout ce dont vous avez besoin pour une célébration d'anniversaire pour enfants inoubliable.",
+    "whatMakesSpecial": "Ce qui rend le Centre Funtastique spécial",
+    "feature1Title": "Lieu entièrement privé",
+    "feature1Desc": "1500 pieds carrés d'espace privé - jamais de réservations partagées",
+    "feature2Title": "Hôte de fête professionnel",
+    "feature2Desc": "Hôte dédié gère l'installation, les activités et le nettoyage",
+    "feature3Title": "Fêtes à thème personnalisées",
+    "feature3Desc": "Frozen, Princesse, Décoration de cupcakes et plus",
+    "feature4Title": "Sans stress pour les parents",
+    "feature4Desc": "Nous gérons tout pour que vous puissiez profiter de la célébration",
+    "servingFamilies": "Au service de",
+    "servingAreas": "zones",
+    "bookParty": "Réservez votre fête d'anniversaire à {{location}}",
+    "bookDescription": "Prêt à planifier une fête d'anniversaire sans stress que vos enfants vont adorer ? Contactez le Centre Funtastique dès aujourd'hui pour réserver votre lieu de fête privé. Nous servons les familles de {{location}} avec un accès pratique et des célébrations inoubliables.",
+    "contactButton": "Contactez-nous pour réserver",
+    "detail": {
+      "service1Title": "Lieu de fête d'anniversaire privé pour enfants à {{location}}",
+      "service1Desc": "Vous cherchez un lieu de fête d'anniversaire pour enfants près de {{location}}? Notre espace de fête privé de 1500 pieds carrés est parfait pour les célébrations d'anniversaire pour enfants sans réservations partagées.",
+      "service2Title": "Hôte de fête d'anniversaire professionnel",
+      "service2Desc": "Chaque fête pour enfants comprend un hôte de fête dédié qui gère les activités, sert la nourriture et s'occupe du nettoyage - rendant l'anniversaire de votre enfant sans stress pour les parents à {{location}}.",
+      "service3Title": "Forfaits de fête d'anniversaire à thème",
+      "service3Desc": "Thèmes d'anniversaire populaires pour enfants incluant les fêtes Frozen, les fêtes de Princesse, la décoration de cupcakes, la fabrication de bracelets et des thèmes d'anniversaire personnalisés pour les enfants à {{location}}.",
+      "service4Title": "Réservation de fête d'anniversaire flexible",
+      "service4Desc": "Réservez la fête d'anniversaire de votre enfant les week-ends (10h - 20h) ou en semaine sur rendez-vous. Horaires de fête pratiques pour les familles de {{location}}.",
+      "themesTitle": "Thèmes de fête d'anniversaire populaires pour enfants de {{location}}",
+      "themesDesc": "Transformez la fête d'anniversaire de votre enfant avec nos forfaits de fête à thème! Chaque thème d'anniversaire pour enfants comprend des décorations personnalisées, des activités adaptées à l'âge et des fournitures. Parfait pour les célébrations d'anniversaire pour enfants à {{location}}.",
+      "viewAllThemes": "Voir tous les thèmes"
+    }
+  }
+}
+

@@ -1,32 +1,35 @@
 import { Building2, User, Sparkles, Tv } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
+  
   const services = [
     {
       icon: Building2,
-      title: "Private Venue just for your party",
-      description: "Enjoy a 1500 sq ft fully private space just for you and your guests—no shared bookings, ever.",
+      titleKey: "services.venue.title",
+      descriptionKey: "services.venue.description",
       image: "/assets/images/final_pics/desktop/centre_white_view.webp",
       mobileImage: "/assets/images/final_pics/mobile/centre_white_view.webp"
     },
     {
       icon: User,
-      title: "Party Host to help with the party",
-      description: "Your dedicated host helps with everything from serving food to post-party cleanup so you can relax and enjoy the celebration.",
+      titleKey: "services.host.title",
+      descriptionKey: "services.host.description",
       image: "/assets/images/final_pics/desktop/host.webp",
       mobileImage: "/assets/images/final_pics/mobile/host.webp"
     },
     {
       icon: Sparkles,
-      title: "Customized Decorations & Activities",
-      description: "Bring your party to life with your child's favorite decorations. We also offer activities like cupcake decorating, ice-cream making, bracelet making for a small extra price.",
+      titleKey: "services.decorations.title",
+      descriptionKey: "services.decorations.description",
       image: "/assets/images/final_pics/desktop/ftq_cpcake.webp",
       mobileImage: "/assets/images/final_pics/mobile/ftq_cpcake.webp"
     },
     {
       icon: Tv,
-      title: "Includes a Kitchen, TV, Sound System & More",
-      description: "Make the most of your event with access to a lot of toys, full kitchen, TV set, sound system, and chairs, tables or anything else you could need.",
+      titleKey: "services.facilities.title",
+      descriptionKey: "services.facilities.description",
       image: "/assets/images/final_pics/desktop/centre_playground.webp",
       mobileImage: "/assets/images/final_pics/mobile/centre_playground.webp"
     },
@@ -37,10 +40,10 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 max-w-4xl mx-auto animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            What's Included in Your Funtastique Package
+            {t('services.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            We make kids' parties simple, fun, and stress-free for parents. Just bring the cake, food and the kids, we'll handle the rest so you can enjoy the celebration too!
+            {t('services.description')}
           </p>
         </div>
 
@@ -69,10 +72,10 @@ const Services = () => {
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
-                  {service.title}
+                  {t(service.titleKey)}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
+                  {t(service.descriptionKey)}
                 </p>
               </div>
             </div>

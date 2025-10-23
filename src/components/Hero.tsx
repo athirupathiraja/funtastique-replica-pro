@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation();
+  
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -128,19 +131,28 @@ const Hero = () => {
               
               {/* Topper */}
               <div className="text-lg font-bold text-primary uppercase tracking-wider mb-4">
-                Centre FUNtastique
+                {t('hero.topper')}
               </div>
 
               {/* Main Headline */}
               <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
-                <span className="block text-foreground">Private Rental</span>
-                <span className="block text-primary">Space for Children's</span>
-                <span className="block text-foreground">Events</span>
+                {t('hero.title').split('\n').map((line, i) => (
+                  <span key={i} className={`block ${i === 1 ? 'text-primary' : 'text-foreground'}`}>
+                    {line}
+                  </span>
+                ))}
               </h1>
 
               {/* Description */}
               <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto font-medium mb-8">
-                We handle the setup so you can have a <span className="text-primary font-bold bg-primary/10 px-2 py-1 rounded-full">funtastique</span> time.
+                {t('hero.text').split('funtastique').map((part, i, arr) => (
+                  i < arr.length - 1 ? (
+                    <span key={i}>
+                      {part}
+                      <span className="text-primary font-bold bg-primary/10 px-2 py-1 rounded-full">funtastique</span>
+                    </span>
+                  ) : part
+                ))}
               </p>
 
               {/* CTA Button */}
@@ -149,7 +161,7 @@ const Hero = () => {
                 onClick={scrollToContact}
                 className="bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-white px-16 py-8 text-xl font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2"
               >
-                🎉 Get Started 🎉
+                🎉 {t('hero.getStarted')} 🎉
               </Button>
             </div>
           </div>

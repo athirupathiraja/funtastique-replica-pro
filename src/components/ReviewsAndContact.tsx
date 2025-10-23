@@ -1,7 +1,9 @@
 import { Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const ReviewsAndContact = () => {
+  const { t } = useTranslation();
   const reviews = [
     {
       text: "We booked this place for our daughter's bday party and it was absolutely perfect! The space is clean, colorful, and has everything you need. The host was amazing and helped with setup and cleanup. Highly recommend!",
@@ -23,7 +25,7 @@ const ReviewsAndContact = () => {
         <div className="max-w-7xl mx-auto">
           {/* Reviews - Full Width */}
           <div className="bg-secondary/10 rounded-3xl p-8 lg:p-12 space-y-8 animate-fade-in">
-            <h2 className="text-4xl font-bold text-primary mb-8 text-center">Stress FREE Parents</h2>
+            <h2 className="text-4xl font-bold text-primary mb-8 text-center">{t('reviews.title')}</h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {reviews.map((review, index) => (
@@ -47,7 +49,7 @@ const ReviewsAndContact = () => {
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-white py-6 text-lg font-semibold rounded-full transition-all px-8"
               >
-                Read More Reviews
+                {t('reviews.submit')}
               </Button>
             </div>
           </div>

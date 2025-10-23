@@ -1,7 +1,10 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const ContactInfo = () => {
+  const { t } = useTranslation();
+  
   const scrollToForm = () => {
     const element = document.getElementById("contact-form");
     if (element) {
@@ -16,9 +19,9 @@ const ContactInfo = () => {
           {/* About */}
           <div className="space-y-8 animate-fade-in">
             <div>
-              <h2 className="text-4xl font-bold text-primary mb-6">Get in Touch</h2>
+              <h2 className="text-4xl font-bold text-primary mb-6">{t('contact.title')}</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Centre Funtastique was started by a mom who knows just how wild (and wonderful) kids' parties can be. Our goal? Make celebrating easy, fun, and totally unforgettable — with all the magic and none of the mess!
+                {t('contact.text')}
               </p>
             </div>
           </div>
@@ -30,9 +33,9 @@ const ContactInfo = () => {
                 <Phone className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-1">Phone</h3>
+                <h3 className="font-bold text-foreground mb-1">{t('contact.phone.label')}</h3>
                 <a href="tel:+15147151432" className="text-muted-foreground hover:text-primary transition-colors">
-                  +1 (514) 715 1432
+                  {t('contact.phone.value')}
                 </a>
               </div>
             </div>
@@ -42,9 +45,9 @@ const ContactInfo = () => {
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-1">Email</h3>
+                <h3 className="font-bold text-foreground mb-1">{t('contact.email.label')}</h3>
                 <a href="mailto:centrefuntastique@gmail.com" className="text-muted-foreground hover:text-primary transition-colors break-all">
-                  centrefuntastique@gmail.com
+                  {t('contact.email.value')}
                 </a>
               </div>
             </div>
@@ -54,9 +57,9 @@ const ContactInfo = () => {
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-1">Address</h3>
+                <h3 className="font-bold text-foreground mb-1">{t('contact.address.label')}</h3>
                 <p className="text-muted-foreground">
-                  3551 Rue Bélair, Montréal, QC H2A 2B1
+                  {t('contact.address.value')}
                 </p>
               </div>
             </div>
@@ -66,7 +69,7 @@ const ContactInfo = () => {
                 onClick={scrollToForm}
                 className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
               >
-                Make Appointment
+                {t('contact.form.title')}
               </Button>
             </div>
           </div>

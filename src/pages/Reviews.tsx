@@ -2,8 +2,10 @@ import { Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useTranslation } from "react-i18next";
 
 const Reviews = () => {
+  const { t } = useTranslation();
   const featuredReviews = [
     {
       text: "Easiest and least stressful party we've ever planned. And the kids had a blast! Highly recommend!",
@@ -114,12 +116,19 @@ const Reviews = () => {
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight animate-fade-in">
-            <span className="block text-foreground">Don't Just Take</span>
-            <span className="block text-primary">Our Word For It...</span>
+            <span className="block text-foreground">{t('reviews.heroTitle')}</span>
+            <span className="block text-primary">{t('reviews.heroSubtitle')}</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto font-medium animate-fade-in">
-            See what our happy families have to say about their <span className="text-primary font-bold">Funtastique parties</span>! Our greatest joy is seeing your glowing reviews.
+            {t('reviews.heroDescription').split('Funtastique parties').map((part, i, arr) => (
+              i < arr.length - 1 ? (
+                <span key={i}>
+                  {part}
+                  <span className="text-primary font-bold">Funtastique parties</span>
+                </span>
+              ) : part
+            ))}
           </p>
         </div>
         
@@ -163,7 +172,7 @@ const Reviews = () => {
       <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-16">
-            More from Our Funtastique Families
+            {t('reviews.moreReviewsTitle')}
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -193,10 +202,10 @@ const Reviews = () => {
       <section className="py-20 px-4 bg-primary">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Had a Funtastique Time?
+            {t('reviews.ctaTitle')}
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            We'd love to hear about your experience! New reviews help us and help other parents planning their perfect party.
+            {t('reviews.ctaDescription')}
           </p>
           <a 
             href="https://www.google.com/search?q=centre+funtastique" 
@@ -207,7 +216,7 @@ const Reviews = () => {
               size="lg"
               className="bg-white text-primary hover:bg-white/90 text-lg h-14 px-8"
             >
-              Leave a Review on Google
+              {t('reviews.ctaButton')}
             </Button>
           </a>
         </div>

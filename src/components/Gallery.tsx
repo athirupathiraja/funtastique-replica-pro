@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   // Gallery images from final_pics directory
@@ -57,9 +59,9 @@ const Gallery = () => {
     <section id="gallery" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Our Gallery</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">{t('gallery.title')}</h2>
           <p className="text-xl text-primary/80">
-            ✨ Tap any image for a FUNtastique close-up view of our space & activities! ✨
+            {t('gallery.subtitle')}
           </p>
         </div>
 
