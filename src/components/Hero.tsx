@@ -21,10 +21,11 @@ const Hero = () => {
           />
         </picture>
         {/* Better overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/30 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white/40"></div>
-        {/* Fun pattern overlay */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/30 to-transparent md:block hidden"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-white/40 md:block hidden"></div>
+        <div className="absolute inset-0 bg-white/20 md:hidden"></div>
+        {/* Fun pattern overlay - Desktop only */}
+        <div className="absolute inset-0 opacity-10 hidden md:block">
           <div className="w-full h-full" style={{
             backgroundImage: `radial-gradient(circle at 20% 80%, rgba(255, 106, 62, 0.1) 0%, transparent 50%),
                              radial-gradient(circle at 80% 20%, rgba(255, 186, 67, 0.1) 0%, transparent 50%),
