@@ -21,6 +21,25 @@ const Index = () => {
         <ReviewsAndContact />
         <FAQ />
       </main>
+      
+      {/* Website Credit Section */}
+      <section className="py-10 px-4 bg-gradient-to-b from-white to-muted/10">
+        <div className="container mx-auto max-w-4xl text-center">
+          <p className="text-sm text-muted-foreground">
+            Website crafted with care by{' '}
+            <a 
+              href="https://griffinstudios.ca" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-semibold"
+            >
+              Griffin Studios
+            </a>
+            {' '}— Web solutions for growing businesses
+          </p>
+        </div>
+      </section>
+      
       <Footer />
     </div>
   );

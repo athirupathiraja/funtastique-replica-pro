@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Phone, Globe, Menu, ChevronRight } from "lucide-react";
+import { Phone, Menu, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -45,10 +45,10 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className={`container mx-auto px-4 py-2 md:py-4 transition-all duration-300 ${
+      <div className={`mx-auto py-2 md:py-2 transition-all duration-300 ${
         isScrolled
-          ? "bg-white"
-          : "bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg mt-4 mx-4"
+          ? "bg-white px-4 container"
+          : "bg-white/95 backdrop-blur-sm rounded-2xl shadow-lg mt-4 mx-3 px-4 max-w-[calc(100%-1.5rem)]"
       }`}>
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -57,7 +57,7 @@ const Header = () => {
               <img 
                 src="/assets/images/funlogo.svg" 
                 alt="Centre Funtastique" 
-                className="h-16 md:h-12 w-auto"
+                className="h-16 md:h-16 w-auto"
                 fetchPriority="high"
               />
             </Link>
@@ -238,9 +238,8 @@ const Header = () => {
               onClick={toggleLanguage}
               variant="outline" 
               size="sm" 
-              className="border-secondary text-secondary hover:bg-secondary hover:text-white"
+              className="border-primary text-primary hover:bg-primary hover:text-white"
             >
-              <Globe className="w-4 h-4 mr-1" />
               {i18n.language === 'en' ? 'FR' : 'EN'}
             </Button>
             <div className="hidden lg:flex items-center gap-2 text-foreground">
@@ -253,18 +252,26 @@ const Header = () => {
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-foreground hover:text-primary p-1">
-                  <Menu className="h-24 w-24" strokeWidth={3} />
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  className="text-primary hover:text-primary hover:bg-primary/10 rounded-lg p-3 h-14 w-14 transition-all"
+                >
+                  <div className="flex flex-col gap-1.5 w-8">
+                    <div className="h-1 w-full bg-current rounded-full"></div>
+                    <div className="h-1 w-full bg-current rounded-full"></div>
+                    <div className="h-1 w-full bg-current rounded-full"></div>
+                  </div>
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px] p-0">
                 <div className="flex flex-col h-full">
                   {/* Header */}
-                  <div className="flex items-center p-6 border-b">
+                  <div className="flex items-center p-3 border-b">
                     <img 
                       src="/assets/images/funlogo.svg" 
                       alt="Centre Funtastique" 
-                      className="h-10 w-auto"
+                      className="h-14 w-auto"
                       fetchPriority="high"
                     />
                   </div>
@@ -341,9 +348,8 @@ const Header = () => {
                     <Button 
                       onClick={toggleLanguage}
                       variant="outline" 
-                      className="w-full border-secondary text-secondary hover:bg-secondary hover:text-white h-12 text-base font-medium"
+                      className="w-full border-primary text-primary hover:bg-primary hover:text-white h-12 text-base font-medium"
                     >
-                      <Globe className="w-5 h-5 mr-2" />
                       {i18n.language === 'en' ? 'Français (FR)' : 'English (EN)'}
                     </Button>
 
@@ -352,7 +358,7 @@ const Header = () => {
                       <Button 
                         className="w-full bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-white h-14 text-lg font-bold shadow-lg"
                       >
-                        🎉 Book Now
+                        🎉 {t('nav.bookNow')}
                       </Button>
                     </Link>
                   </div>

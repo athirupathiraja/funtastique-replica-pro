@@ -1,5 +1,6 @@
 import { MapPin, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { locations, getAllRegions } from "@/data/locations";
@@ -8,6 +9,10 @@ import { useTranslation } from "react-i18next";
 const Locations = () => {
   const { t } = useTranslation();
   const regions = getAllRegions();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">

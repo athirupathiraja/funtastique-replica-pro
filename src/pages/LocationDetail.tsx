@@ -1,5 +1,5 @@
 import { Link, useLocation as useRouterLocation } from "react-router-dom";
-import { MapPin, Phone, Calendar, Users, Star, ArrowRight, CheckCircle2, Clock } from "lucide-react";
+import { MapPin, Phone, Calendar as CalendarIcon, Users, Star, ArrowRight, CheckCircle2, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -16,6 +16,8 @@ const LocationDetail = () => {
 
   // Set page title and meta description for SEO
   useEffect(() => {
+    window.scrollTo(0, 0);
+    
     if (location) {
       document.title = location.title;
       
@@ -65,7 +67,7 @@ const LocationDetail = () => {
       descKey: 'locations.detail.service3Desc'
     },
     {
-      icon: Calendar,
+      icon: CalendarIcon,
       titleKey: 'locations.detail.service4Title',
       descKey: 'locations.detail.service4Desc'
     }
@@ -77,33 +79,6 @@ const LocationDetail = () => {
     { nameKey: "themes.cupcake.title", emoji: "🧁", slug: "cupcake-decorating" },
     { nameKey: "themes.bracelet.title", emoji: "💎", slug: "bracelet-making" },
     { nameKey: "themes.cartoon.title", emoji: "🎨", slug: "cartoon-party" }
-  ];
-
-  const faqs = [
-    {
-      q: `How far is Centre Funtastique kids birthday party venue from ${location.name}?`,
-      a: `Our children's birthday party venue is conveniently located ${location.distance} from ${location.name}. We serve families throughout ${location.name} and surrounding areas for kids birthday parties, making us the perfect choice for your child's celebration.`
-    },
-    {
-      q: `What's included in your ${location.name} kids birthday party package?`,
-      a: `Every children's birthday party package includes: private party venue rental (no sharing!), dedicated birthday party host, tables & chairs for all guests, full kitchen access, TV & sound system for music and videos, and your choice of themed birthday decorations. Perfect for kids parties in ${location.name}!`
-    },
-    {
-      q: `How many children can attend a birthday party at your ${location.name} venue?`,
-      a: `Our kids birthday party venue comfortably accommodates up to 20 children plus parents and guardians. The 1500 sq ft private space is ideal for children's birthday parties, providing plenty of room for activities, games, and celebration for ${location.name} families.`
-    },
-    {
-      q: `Do you provide birthday cake and food for kids parties in ${location.name}?`,
-      a: `You bring your child's birthday cake and party food - we handle everything else! Our birthday party venue includes full kitchen access. We also offer popular add-on activities like cupcake decorating, ice cream making, and bracelet crafting to make your ${location.name} kids birthday party extra special.`
-    },
-    {
-      q: `What ages are your ${location.name} birthday parties suitable for?`,
-      a: `Centre Funtastique hosts children's birthday parties for kids ages 2-12. Our themed birthday parties, activities, and party space are designed specifically for young children, making us the top choice for kids birthday celebrations in ${location.name}.`
-    },
-    {
-      q: `How do I book a kids birthday party near ${location.name}?`,
-      a: `Booking your child's birthday party is easy! Call us at (514) 715-1432 or fill out our online contact form. We'll help you choose the perfect birthday theme, select activities, and schedule your private party time. Most ${location.name} families book 2-4 weeks in advance for weekend birthday parties.`
-    }
   ];
 
   return (
@@ -232,10 +207,10 @@ const LocationDetail = () => {
         <section className="py-20 px-4 bg-white">
           <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Kids Birthday Party Venue Serving All {location.name} Neighborhoods
+            {t('locations.detail.neighborhoodsTitle', { location: location.name })}
           </h2>
           <p className="text-center text-muted-foreground mb-12">
-            Centre Funtastique proudly serves children's birthday parties across all {location.name} neighborhoods. Our private kids party venue is easily accessible from these areas:
+            {t('locations.detail.neighborhoodsDesc', { location: location.name })}
           </p>
 
             <div className="grid md:grid-cols-3 gap-4">
@@ -258,10 +233,10 @@ const LocationDetail = () => {
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-primary">
-            What Makes Centre Funtastique the Best Kids Birthday Party Venue Near {location.name}?
+            {t('locations.detail.benefitsTitle', { location: location.name })}
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-            Centre Funtastique has been hosting memorable children's birthday parties for {location.name} families since 2020. Here's why parents choose us for their kids birthday celebrations:
+            {t('locations.detail.benefitsDesc', { location: location.name })}
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -269,30 +244,30 @@ const LocationDetail = () => {
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <CheckCircle2 className="w-6 h-6 text-primary" />
-                  100% Private Birthday Party Venue
+                  {t('locations.detail.benefit1Title')}
                 </h3>
                 <p className="text-muted-foreground">
-                  Unlike other kids party venues in {location.name}, our 1500 sq ft space is exclusively yours for your child's birthday party. No sharing with other parties means more privacy, flexibility, and a truly personalized children's birthday celebration.
+                  {t('locations.detail.benefit1Desc', { location: location.name })}
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <CheckCircle2 className="w-6 h-6 text-primary" />
-                  Professional Kids Party Hosting
+                  {t('locations.detail.benefit2Title')}
                 </h3>
                 <p className="text-muted-foreground">
-                  Every birthday party includes an experienced party host who manages activities, entertains children, serves food, and handles cleanup. {location.name} parents love that they can actually enjoy their child's birthday party instead of working through it!
+                  {t('locations.detail.benefit2Desc', { location: location.name })}
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <CheckCircle2 className="w-6 h-6 text-primary" />
-                  Themed Birthday Party Packages
+                  {t('locations.detail.benefit3Title')}
                 </h3>
                 <p className="text-muted-foreground">
-                  From Frozen birthday parties to Princess parties, Cupcake decorating to Bracelet making - our themed kids birthday packages make planning easy for {location.name} families. Each theme includes decorations, activities, and supplies.
+                  {t('locations.detail.benefit3Desc', { location: location.name })}
                 </p>
               </div>
             </div>
@@ -301,30 +276,30 @@ const LocationDetail = () => {
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <CheckCircle2 className="w-6 h-6 text-primary" />
-                  Everything Kids Need for Birthday Fun
+                  {t('locations.detail.benefit4Title')}
                 </h3>
                 <p className="text-muted-foreground">
-                  Our children's birthday party venue includes toys, games, tables, chairs, full kitchen, TV, sound system, and party supplies. Perfect for active kids birthday celebrations in {location.name} - rain or shine!
+                  {t('locations.detail.benefit4Desc', { location: location.name })}
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <CheckCircle2 className="w-6 h-6 text-primary" />
-                  Convenient Location for {location.name}
+                  {t('locations.detail.benefit5Title', { location: location.name })}
                 </h3>
                 <p className="text-muted-foreground">
-                  Located just {location.distance}, Centre Funtastique is easily accessible for birthday party guests from {location.name}. Ample parking makes arrival and pickup smooth for kids birthday parties.
+                  {t('locations.detail.benefit5Desc', { location: location.name, distance: location.distance })}
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <CheckCircle2 className="w-6 h-6 text-primary" />
-                  Stress-Free Kids Birthday Parties
+                  {t('locations.detail.benefit6Title')}
                 </h3>
                 <p className="text-muted-foreground">
-                  We handle setup, hosting, activities, and cleanup for your child's birthday party. {location.name} parents consistently rate us 5 stars for making kids birthday celebrations easy, affordable, and unforgettable!
+                  {t('locations.detail.benefit6Desc', { location: location.name })}
                 </p>
               </div>
             </div>
@@ -336,10 +311,10 @@ const LocationDetail = () => {
       <section className="py-20 px-4 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            What {location.name} Parents Say About Our Kids Birthday Parties
+            {t('locations.detail.testimonialsTitle', { location: location.name })}
           </h2>
           <p className="text-center text-muted-foreground mb-12">
-            Real reviews from families who hosted children's birthday parties at Centre Funtastique
+            {t('locations.detail.testimonialsDesc')}
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -350,9 +325,9 @@ const LocationDetail = () => {
                 ))}
               </div>
               <p className="text-muted-foreground mb-4 italic">
-                "Best kids birthday party venue near {location.name}! The private space made our daughter's 6th birthday party so special. The party host was amazing with the children and the Frozen theme decorations were beautiful!"
+                "{t('locations.detail.testimonial1', { location: location.name })}"
               </p>
-              <p className="font-semibold text-sm">- Sarah M., {location.name}</p>
+              <p className="font-semibold text-sm">- {t('locations.detail.testimonial1Author', { location: location.name })}</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-md">
@@ -362,9 +337,9 @@ const LocationDetail = () => {
                 ))}
               </div>
               <p className="text-muted-foreground mb-4 italic">
-                "Centre Funtastique made our son's birthday party stress-free! They handled everything - setup, activities, cleanup. All we did was show up and enjoy. Highly recommend for {location.name} families!"
+                "{t('locations.detail.testimonial2', { location: location.name })}"
               </p>
-              <p className="font-semibold text-sm">- Michael T., {location.name}</p>
+              <p className="font-semibold text-sm">- {t('locations.detail.testimonial2Author', { location: location.name })}</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-md">
@@ -374,16 +349,16 @@ const LocationDetail = () => {
                 ))}
               </div>
               <p className="text-muted-foreground mb-4 italic">
-                "Perfect kids birthday party venue! The cupcake decorating activity was a huge hit. 20 children had a blast and parents could relax. Worth the short drive from {location.name}!"
+                "{t('locations.detail.testimonial3', { location: location.name })}"
               </p>
-              <p className="font-semibold text-sm">- Jessica L., {location.name}</p>
+              <p className="font-semibold text-sm">- {t('locations.detail.testimonial3Author', { location: location.name })}</p>
             </div>
           </div>
 
           <div className="text-center mt-8">
             <Link to="/reviews">
               <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                Read More Reviews from {location.name} Families
+                {t('locations.detail.readMoreReviews', { location: location.name })}
               </Button>
             </Link>
           </div>
@@ -394,21 +369,25 @@ const LocationDetail = () => {
       <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Kids Birthday Party FAQs - {location.name}
+            {t('locations.detail.faqTitle', { location: location.name })}
           </h2>
           <p className="text-center text-muted-foreground mb-12">
-            Common questions about children's birthday parties from {location.name} families
+            {t('locations.detail.faqDesc', { location: location.name })}
           </p>
 
           <div className="space-y-6">
-            {faqs.map((faq, index) => (
+            {[1, 2, 3, 4, 5, 6].map((num, index) => (
               <div
-                key={index}
+                key={num}
                 className="bg-white rounded-xl p-6 shadow-md animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h3 className="text-lg font-bold text-foreground mb-3">{faq.q}</h3>
-                <p className="text-muted-foreground">{faq.a}</p>
+                <h3 className="text-lg font-bold text-foreground mb-3">
+                  {t(`locations.detail.faq${num}Q`, { location: location.name })}
+                </h3>
+                <p className="text-muted-foreground">
+                  {t(`locations.detail.faq${num}A`, { location: location.name, distance: location.distance })}
+                </p>
               </div>
             ))}
           </div>
@@ -419,23 +398,23 @@ const LocationDetail = () => {
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Contact Centre Funtastique - Kids Birthday Party Venue Serving {location.name}
+            {t('locations.detail.contactTitle', { location: location.name })}
           </h2>
           <p className="text-center text-muted-foreground mb-12">
-            Ready to book your child's birthday party? Contact us today!
+            {t('locations.detail.contactDesc')}
           </p>
 
           <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
-                <h3 className="font-bold text-xl mb-6">Centre Funtastique</h3>
+                <h3 className="font-bold text-xl mb-6">{t('locations.detail.centreName')}</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold mb-1">Address</p>
-                      <p className="text-muted-foreground">3551 Rue Bélair</p>
-                      <p className="text-muted-foreground">Montréal, QC H2A 2B1</p>
+                      <p className="font-semibold mb-1">{t('locations.detail.addressLabel')}</p>
+                      <p className="text-muted-foreground">{t('locations.detail.addressLine1')}</p>
+                      <p className="text-muted-foreground">{t('locations.detail.addressLine2')}</p>
                       <p className="text-sm text-primary mt-1">{location.distance}</p>
                     </div>
                   </div>
@@ -443,9 +422,9 @@ const LocationDetail = () => {
                   <div className="flex items-start gap-3">
                     <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold mb-1">Phone</p>
+                      <p className="font-semibold mb-1">{t('contact.phone.label')}</p>
                       <a href="tel:+15147151432" className="text-primary hover:text-primary/80 font-medium">
-                        (514) 715-1432
+                        {t('contact.phone.value')}
                       </a>
                     </div>
                   </div>
@@ -453,25 +432,25 @@ const LocationDetail = () => {
               </div>
 
               <div>
-                <h3 className="font-bold text-xl mb-6">Kids Birthday Party Hours</h3>
+                <h3 className="font-bold text-xl mb-6">{t('locations.detail.hoursTitle')}</h3>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold">Weekend Parties</p>
-                      <p className="text-muted-foreground">Saturday - Sunday: 10:00 AM - 8:00 PM</p>
+                      <p className="font-semibold">{t('locations.detail.weekendParties')}</p>
+                      <p className="text-muted-foreground">{t('locations.detail.weekendHours')}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Calendar className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                    <CalendarIcon className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold">Weekday Parties</p>
-                      <p className="text-muted-foreground">Monday - Friday: By Appointment</p>
+                      <p className="font-semibold">{t('locations.detail.weekdayParties')}</p>
+                      <p className="text-muted-foreground">{t('locations.detail.weekdayHours')}</p>
                     </div>
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground mt-6 italic">
-                  Serving {location.name} families with private kids birthday party venue rentals and themed party packages.
+                  {t('locations.detail.servingNote', { location: location.name })}
                 </p>
               </div>
             </div>
@@ -480,53 +459,62 @@ const LocationDetail = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-primary to-primary-light">
-        <div className="container mx-auto max-w-4xl text-center text-white">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Book Your Child's Birthday Party in {location.name} Today!
+      <section className="py-20 px-4 bg-gradient-to-b from-white via-primary/5 to-white border-t border-b relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-10 right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            {t('locations.detail.ctaTitle', { location: location.name })}
           </h2>
-          <p className="text-xl mb-8 text-white/90">
-            Join hundreds of {location.name} families who trust Centre Funtastique for their children's birthday parties! We're the top-rated kids birthday party venue near {location.name}.
+          <p className="text-lg mb-8 text-muted-foreground max-w-2xl mx-auto">
+            {t('locations.detail.ctaDesc', { location: location.name })}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 h-14 px-8 text-lg font-bold shadow-xl">
-                Book Your Birthday Party Today
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white h-14 px-10 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all">
+                {t('locations.detail.bookPartyButton')}
               </Button>
             </Link>
             <a href="tel:+15147151432">
-              <Button size="lg" variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary h-14 px-8 text-lg font-bold">
+              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white h-14 px-10 text-lg font-semibold rounded-full transition-all">
                 <Phone className="w-5 h-5 mr-2" />
-                Call (514) 715-1432
+                {t('locations.detail.callButton')} {t('contact.phone.value')}
               </Button>
             </a>
           </div>
         </div>
       </section>
 
-      {/* Map Section */}
-      {location.mapUrl && (
-        <section className="px-4 pb-20">
-          <div className="container mx-auto max-w-7xl">
-            <h2 className="text-3xl font-bold text-center mb-8">
-              Directions from {location.name}
+      {/* Directions Section */}
+      <section className="px-4 py-20 bg-muted/20">
+        <div className="container mx-auto max-w-4xl text-center">
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
+            <MapPin className="w-16 h-16 text-primary mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              {t('locations.detail.directionsTitle', { location: location.name })}
             </h2>
-            <div className="w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              <iframe
-                src={location.mapUrl}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title={`Directions from ${location.name} to Centre Funtastique`}
-              ></iframe>
-            </div>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Get turn-by-turn directions from {location.name} to Centre Funtastique
+            </p>
+            <a 
+              href={`https://www.google.com/maps/dir/${encodeURIComponent(location.name + ', Laval, QC')}/Centre+Funtastique,+3551+Rue+Bélair,+Montréal,+QC+H2A+2B1`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-white h-14 px-10 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+              >
+                <MapPin className="w-5 h-5 mr-2" />
+                Get Directions on Google Maps
+              </Button>
+            </a>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       <Footer />
     </div>

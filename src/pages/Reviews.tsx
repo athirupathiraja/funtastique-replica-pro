@@ -1,11 +1,17 @@
 import { Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTranslation } from "react-i18next";
 
 const Reviews = () => {
   const { t } = useTranslation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const featuredReviews = [
     {
       text: "Easiest and least stressful party we've ever planned. And the kids had a blast! Highly recommend!",
@@ -198,7 +204,7 @@ const Reviews = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Leave a Review */}
       <section className="py-20 px-4 bg-primary">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -219,6 +225,44 @@ const Reviews = () => {
               {t('reviews.ctaButton')}
             </Button>
           </a>
+        </div>
+      </section>
+
+      {/* CTA Section - Book Your Party */}
+      <section className="py-20 px-4 bg-gradient-to-r from-primary-light to-secondary">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Join Our Happy Families?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            See why parents love Centre Funtastique. Book your stress-free party today and create memories that last a lifetime!
+          </p>
+          <Link to="/contact">
+            <Button 
+              size="lg"
+              className="bg-white text-primary hover:bg-white/90 text-xl font-bold px-12 py-7 rounded-full shadow-2xl transform hover:scale-105 transition-all"
+            >
+              Book Your Funtastique Party
+            </Button>
+          </Link>
+        </div>
+      </section>
+
+      {/* Web Design Credit */}
+      <section className="py-8 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <p className="text-sm text-muted-foreground">
+            Website crafted with care by{' '}
+            <a 
+              href="https://griffinstudios.ca" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-semibold"
+            >
+              Griffin Studios
+            </a>
+            {' '}— Web solutions for growing businesses
+          </p>
         </div>
       </section>
 

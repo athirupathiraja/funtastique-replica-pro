@@ -225,7 +225,7 @@ All colors MUST be HSL.
 /* Shooting Star Container - Random paths */
 .shooting-star {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: -100px;
   animation: shooting-star-1 10s ease-out 6s infinite,
              shooting-star-2 10s ease-out 16s infinite,
@@ -279,4 +279,12 @@ All colors MUST be HSL.
   left: -180px;
   transform: translateY(-50%);
   filter: blur(1px);
+}
+
+/* Ensure shooting star is visible on mobile */
+@media (max-width: 768px) {
+  .shooting-star {
+    display: block !important;
+    opacity: 1 !important;
+  }
 }

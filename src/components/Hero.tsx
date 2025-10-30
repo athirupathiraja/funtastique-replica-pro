@@ -1,22 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const { t } = useTranslation();
-  
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <picture>
-          <source media="(max-width: 600px)" srcSet="/assets/images/final_pics/mobile/hero.webp" />
+          <source media="(max-width: 600px)" srcSet="/assets/images/final_pics/green_centre_view.webp" />
           <source media="(min-width: 601px)" srcSet="/assets/images/final_pics/desktop/hero.webp" />
           <img 
             src="/assets/images/final_pics/desktop/hero.webp" 
@@ -40,35 +34,35 @@ const Hero = () => {
       </div>
       
       {/* Fun Decorative Elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-x-clip overflow-y-hidden z-50">
         {/* Balloon Cluster - Top Right */}
-        <div className="absolute top-20 right-8 animate-float" style={{ animationDelay: "0.5s" }}>
+        <div className="absolute top-24 md:top-28 right-8 animate-float" style={{ animationDelay: "0.5s" }}>
           <div className="w-8 h-12 bg-gradient-to-b from-red-400/80 to-pink-400/70 rounded-full shadow-lg"></div>
           <div className="w-0.5 h-8 bg-gray-400/60 ml-4"></div>
         </div>
-        <div className="absolute top-28 right-20 animate-float-slow" style={{ animationDelay: "1s" }}>
+        <div className="absolute top-32 md:top-36 right-20 animate-float-slow" style={{ animationDelay: "1s" }}>
           <div className="w-6 h-10 bg-gradient-to-b from-blue-400/80 to-cyan-400/70 rounded-full shadow-lg"></div>
           <div className="w-0.5 h-6 bg-gray-400/60 ml-3"></div>
         </div>
-        <div className="absolute top-16 right-32 animate-float" style={{ animationDelay: "0.8s" }}>
+        <div className="absolute top-20 md:top-24 right-32 animate-float" style={{ animationDelay: "0.8s" }}>
           <div className="w-7 h-11 bg-gradient-to-b from-yellow-400/80 to-orange-400/70 rounded-full shadow-lg"></div>
           <div className="w-0.5 h-7 bg-gray-400/60 ml-3.5"></div>
         </div>
-        <div className="absolute top-32 right-40 animate-float-slow" style={{ animationDelay: "1.5s" }}>
+        <div className="absolute top-36 md:top-40 right-40 animate-float-slow" style={{ animationDelay: "1.5s" }}>
           <div className="w-5 h-8 bg-gradient-to-b from-green-400/80 to-emerald-400/70 rounded-full shadow-lg"></div>
           <div className="w-0.5 h-5 bg-gray-400/60 ml-2.5"></div>
         </div>
-        <div className="absolute top-24 right-48 animate-float" style={{ animationDelay: "2s" }}>
+        <div className="absolute top-28 md:top-32 right-48 animate-float" style={{ animationDelay: "2s" }}>
           <div className="w-6 h-9 bg-gradient-to-b from-purple-400/80 to-pink-400/70 rounded-full shadow-lg"></div>
           <div className="w-0.5 h-6 bg-gray-400/60 ml-3"></div>
         </div>
         
         {/* Balloon Cluster - Top Left */}
-        <div className="absolute top-24 left-16 animate-float-slow" style={{ animationDelay: "1.2s" }}>
+        <div className="absolute top-28 left-16 animate-float-slow" style={{ animationDelay: "1.2s" }}>
           <div className="w-7 h-10 bg-gradient-to-b from-pink-400/80 to-red-400/70 rounded-full shadow-lg"></div>
           <div className="w-0.5 h-7 bg-gray-400/60 ml-3.5"></div>
         </div>
-        <div className="absolute top-32 left-28 animate-float" style={{ animationDelay: "1.8s" }}>
+        <div className="absolute top-36 left-28 animate-float" style={{ animationDelay: "1.8s" }}>
           <div className="w-5 h-8 bg-gradient-to-b from-cyan-400/80 to-blue-400/70 rounded-full shadow-lg"></div>
           <div className="w-0.5 h-5 bg-gray-400/60 ml-2.5"></div>
         </div>
@@ -114,11 +108,11 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 animate-fade-in">
-        <div className="max-w-4xl mx-auto space-y-8 text-center">
+        <div className="max-w-3xl mx-auto space-y-8 text-center">
           {/* Fun Decorative Card */}
           <div className="relative inline-block">
             {/* Card Background - Clean and readable */}
-            <div className="bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-xl border-2 border-primary/30 relative overflow-hidden">
+            <div className="bg-white/70 backdrop-blur-md rounded-2xl md:rounded-3xl p-6 md:p-7 lg:p-8 shadow-xl border-2 border-primary/30 relative overflow-hidden">
               {/* Subtle decorative elements on card - No animations */}
               <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary/20 rounded-full"></div>
               <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-secondary/20 rounded-full"></div>
@@ -128,23 +122,16 @@ const Hero = () => {
               {/* Simple corner decorations */}
               <div className="absolute top-2 right-2 w-2 h-2 bg-primary/30 transform rotate-45"></div>
               <div className="absolute bottom-2 left-2 w-1.5 h-1.5 bg-secondary/30 transform rotate-45"></div>
-              
-              {/* Topper */}
-              <div className="text-lg font-bold text-primary uppercase tracking-wider mb-4">
-                {t('hero.topper')}
-              </div>
 
               {/* Main Headline */}
-              <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
-                {t('hero.title').split('\n').map((line, i) => (
-                  <span key={i} className={`block ${i === 1 ? 'text-primary' : 'text-foreground'}`}>
-                    {line}
-                  </span>
-                ))}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black md:font-extrabold mb-4 md:mb-6 leading-tight">
+                <span className="block text-foreground">{t('hero.titleLine1')}</span>
+                <span className="block text-primary">{t('hero.titleLine2')}</span>
+                <span className="block text-foreground">{t('hero.titleLine3')}</span>
               </h1>
 
               {/* Description */}
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto font-medium mb-8">
+              <p className="text-lg sm:text-xl md:text-xl lg:text-2xl text-muted-foreground max-w-xl md:max-w-2xl mx-auto font-medium mb-6 md:mb-8">
                 {t('hero.text').split('funtastique').map((part, i, arr) => (
                   i < arr.length - 1 ? (
                     <span key={i}>
@@ -156,13 +143,14 @@ const Hero = () => {
               </p>
 
               {/* CTA Button */}
-              <Button
-                size="lg"
-                onClick={scrollToContact}
-                className="bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-white px-16 py-8 text-xl font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2"
-              >
-                🎉 {t('hero.getStarted')} 🎉
-              </Button>
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-white px-10 py-5 md:px-14 md:py-7 lg:px-16 lg:py-8 text-lg md:text-xl font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2"
+                >
+                  {t('hero.getStarted')}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

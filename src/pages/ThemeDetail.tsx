@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Users, Calendar, Sparkles, Star } from "lucide-react";
 import Header from "@/components/Header";
@@ -8,6 +9,10 @@ import { useTranslation } from "react-i18next";
 const ThemeDetail = () => {
   const { themeId } = useParams();
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [themeId]);
 
   const themeData: Record<string, any> = {
     "frozen-party": {
@@ -268,7 +273,7 @@ const ThemeDetail = () => {
                   <div className="text-white/80 text-sm">{t('themes.common.forPricing')}</div>
                 </div>
 
-                <Link to="/contact">
+                <Link to={`/contact?theme=${theme.themeKey}`}>
                   <Button size="lg" className="w-full bg-white text-foreground hover:bg-white/90 font-bold text-lg shadow-xl transform hover:scale-105 transition-all">
                     {t('themes.common.bookTheme')} 🎉
                   </Button>

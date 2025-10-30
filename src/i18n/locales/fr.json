@@ -5,17 +5,27 @@
     "locations": "Emplacements",
     "about": "À Propos",
     "contact": "Contact",
-    "reviews": "Avis"
+    "reviews": "Avis",
+    "bookNow": "Réserver"
   },
   "hero": {
     "topper": "Centre FUNtastique",
     "title": "Espace de location privé pour événements aux enfants",
+    "titleLine1": "Espace de location",
+    "titleLine2": "privé pour événements",
+    "titleLine3": "aux enfants",
     "text": "Nous nous occupons de l'installation pour que vous puissiez passer un moment funtastique.",
     "getStarted": "Commencer"
   },
   "gallery": {
     "title": "Notre Galerie",
     "subtitle": "✨ Appuyez sur n'importe quelle image pour une vue rapprochée FUNtastique de notre espace et nos activités ! ✨"
+  },
+  "panorama": {
+    "title": "Découvrez notre espace",
+    "subtitle": "Vue panoramique du Centre Funtastique",
+    "description": "✨ Survolez l'image pour explorer notre espace ! ✨",
+    "dragHint": "Faites glisser pour regarder autour"
   },
   "services": {
     "title": "Ce qui est inclus dans votre forfait Funtastique",
@@ -59,6 +69,37 @@
       "phone": "Téléphone",
       "message": "Écrivez votre message...",
       "submit": "Envoyer le Message"
+    },
+    "map": {
+      "findUs": "Nous trouver",
+      "visitUs": "Visitez-nous à notre emplacement à Montréal"
+    },
+    "page": {
+      "heroTitle": "Réservez votre",
+      "heroSubtitle": "Fête Funtastique!",
+      "heroDescription": "Sélectionnez votre date, choisissez votre thème, et nous créerons une célébration inoubliable.",
+      "pickDate": "Choisir une date",
+      "choosePartyDay": "Choisissez le jour de votre fête",
+      "partyDetails": "Détails de la fête",
+      "tellUsAbout": "Parlez-nous de votre célébration",
+      "namePlaceholder": "Votre nom",
+      "emailPlaceholder": "votre@courriel.com",
+      "phonePlaceholder": "Votre numéro de téléphone",
+      "selectTheme": "Sélectionner un thème",
+      "selectTimeSlot": "Sélectionner un créneau horaire",
+      "selectPartySize": "Taille de la fête",
+      "messagePlaceholder": "Des demandes spéciales ou des questions?",
+      "bookingSuccess": "Demande de réservation envoyée!",
+      "bookingSuccessDesc": "Nous vous répondrons dans les 24 heures pour confirmer les détails de votre fête.",
+      "mondaysClosed": "Fermé le lundi pour l'entretien",
+      "customTheme": "Thème personnalisé",
+      "callUs": "Appelez-nous",
+      "emailUs": "Écrivez-nous",
+      "visitUs": "Visitez-nous",
+      "hoursWeekday": "Lun-Ven: Sur rendez-vous",
+      "hoursWeekend": "Sam-Dim: 10h - 20h",
+      "respondTime": "Nous répondons dans les 24 heures",
+      "getDirections": "Obtenir l'itinéraire"
     }
   },
   "reviews": {
@@ -70,7 +111,21 @@
     "moreReviewsTitle": "Plus de nos familles Funtastiques",
     "ctaTitle": "Avez-vous passé un moment Funtastique?",
     "ctaDescription": "Nous aimerions entendre parler de votre expérience ! De nouveaux avis nous aident et aident d'autres parents à planifier leur fête parfaite.",
-    "ctaButton": "Laisser un avis sur Google"
+    "ctaButton": "Laisser un avis sur Google",
+    "homeReviews": {
+      "review1": {
+        "text": "Nous avons réservé cet endroit pour la fête d'anniversaire de notre fille et c'était absolument parfait ! L'espace est propre, coloré et a tout ce dont vous avez besoin. L'hôte était incroyable et a aidé avec l'installation et le nettoyage. Je recommande vivement !",
+        "author": "Bhumika Tandon"
+      },
+      "review2": {
+        "text": "Nous venons de faire une fête à thème La Reine des Neiges pour notre enfant de 5 ans et c'était magique ! Les décorations étaient magnifiques et les enfants ont passé un moment incroyable. L'hôte était si serviable et patient avec tous les enfants. Ça vaut chaque centime !",
+        "author": "Sue"
+      },
+      "review3": {
+        "text": "Endroit fantastique pour faire une fête d'enfants ! Espace privé, super hôte et tant d'activités pour divertir les enfants. Les parents pouvaient vraiment se détendre et profiter de la fête. Je réserverai certainement à nouveau !",
+        "author": "Mike Davoli"
+      }
+    }
   },
   "faq": {
     "topper": "FAQ",
@@ -301,7 +356,63 @@
       "service4Desc": "Réservez la fête d'anniversaire de votre enfant les week-ends (10h - 20h) ou en semaine sur rendez-vous. Horaires de fête pratiques pour les familles de {{location}}.",
       "themesTitle": "Thèmes de fête d'anniversaire populaires pour enfants de {{location}}",
       "themesDesc": "Transformez la fête d'anniversaire de votre enfant avec nos forfaits de fête à thème! Chaque thème d'anniversaire pour enfants comprend des décorations personnalisées, des activités adaptées à l'âge et des fournitures. Parfait pour les célébrations d'anniversaire pour enfants à {{location}}.",
-      "viewAllThemes": "Voir tous les thèmes"
+      "viewAllThemes": "Voir tous les thèmes",
+      "neighborhoodsTitle": "Lieu de fête d'anniversaire pour enfants desservant tous les quartiers de {{location}}",
+      "neighborhoodsDesc": "Le Centre Funtastique dessert fièrement les fêtes d'anniversaire pour enfants dans tous les quartiers de {{location}}. Notre lieu de fête privé pour enfants est facilement accessible depuis ces zones:",
+      "benefitsTitle": "Qu'est-ce qui fait du Centre Funtastique le meilleur lieu de fête d'anniversaire pour enfants près de {{location}}?",
+      "benefitsDesc": "Le Centre Funtastique organise des fêtes d'anniversaire mémorables pour enfants pour les familles de {{location}} depuis 2020. Voici pourquoi les parents nous choisissent pour les célébrations d'anniversaire de leurs enfants:",
+      "benefit1Title": "100% Lieu de fête d'anniversaire privé",
+      "benefit1Desc": "Contrairement à d'autres lieux de fête pour enfants à {{location}}, notre espace de 1500 pieds carrés est exclusivement le vôtre pour la fête d'anniversaire de votre enfant. Aucun partage avec d'autres fêtes signifie plus d'intimité, de flexibilité et une célébration d'anniversaire véritablement personnalisée.",
+      "benefit2Title": "Animation de fête professionnelle pour enfants",
+      "benefit2Desc": "Chaque fête d'anniversaire comprend un hôte de fête expérimenté qui gère les activités, divertit les enfants, sert la nourriture et s'occupe du nettoyage. Les parents de {{location}} adorent pouvoir réellement profiter de la fête d'anniversaire de leur enfant au lieu de travailler!",
+      "benefit3Title": "Forfaits de fête d'anniversaire à thème",
+      "benefit3Desc": "Des fêtes d'anniversaire Frozen aux fêtes de Princesse, de la décoration de cupcakes à la fabrication de bracelets - nos forfaits d'anniversaire thématiques facilitent la planification pour les familles de {{location}}. Chaque thème comprend décorations, activités et fournitures.",
+      "benefit4Title": "Tout ce dont les enfants ont besoin pour s'amuser à leur anniversaire",
+      "benefit4Desc": "Notre lieu de fête d'anniversaire comprend jouets, jeux, tables, chaises, cuisine complète, télévision, système audio et fournitures de fête. Parfait pour les célébrations d'anniversaire actives à {{location}} - beau temps, mauvais temps!",
+      "benefit5Title": "Emplacement pratique pour {{location}}",
+      "benefit5Desc": "Situé à seulement {{distance}}, le Centre Funtastique est facilement accessible pour les invités de fête d'anniversaire de {{location}}. Un grand stationnement facilite l'arrivée et le départ pour les fêtes d'enfants.",
+      "benefit6Title": "Fêtes d'anniversaire sans stress pour enfants",
+      "benefit6Desc": "Nous gérons l'installation, l'animation, les activités et le nettoyage de la fête d'anniversaire de votre enfant. Les parents de {{location}} nous donnent constamment 5 étoiles pour rendre les célébrations d'anniversaire faciles, abordables et inoubliables!",
+      "testimonialsTitle": "Ce que les parents de {{location}} disent de nos fêtes d'anniversaire pour enfants",
+      "testimonialsDesc": "Vrais avis de familles qui ont organisé des fêtes d'anniversaire pour enfants au Centre Funtastique",
+      "testimonial1": "Meilleur lieu de fête d'anniversaire pour enfants près de {{location}}! L'espace privé a rendu la fête d'anniversaire de notre fille si spéciale. L'hôte était incroyable avec les enfants et les décorations sur le thème Frozen étaient magnifiques!",
+      "testimonial1Author": "Sarah M., {{location}}",
+      "testimonial2": "Le Centre Funtastique a rendu la fête d'anniversaire de notre fils sans stress! Ils se sont occupés de tout - installation, activités, nettoyage. Nous n'avons eu qu'à nous présenter et profiter. Hautement recommandé pour les familles de {{location}}!",
+      "testimonial2Author": "Michael T., {{location}}",
+      "testimonial3": "Lieu de fête d'anniversaire parfait! L'activité de décoration de cupcakes a eu un énorme succès. 20 enfants se sont amusés et les parents ont pu se détendre. Vaut le court trajet depuis {{location}}!",
+      "testimonial3Author": "Jessica L., {{location}}",
+      "readMoreReviews": "Lire plus d'avis des familles de {{location}}",
+      "faqTitle": "FAQ sur les fêtes d'anniversaire - {{location}}",
+      "faqDesc": "Questions courantes sur les fêtes d'anniversaire pour enfants des familles de {{location}}",
+      "faq1Q": "À quelle distance se trouve le lieu de fête d'anniversaire Centre Funtastique de {{location}}?",
+      "faq1A": "Notre lieu de fête d'anniversaire pour enfants est idéalement situé à {{distance}} de {{location}}. Nous servons les familles de {{location}} et des environs pour les fêtes d'anniversaire pour enfants, faisant de nous le choix parfait pour la célébration de votre enfant.",
+      "faq2Q": "Qu'est-ce qui est inclus dans votre forfait de fête d'anniversaire pour enfants à {{location}}?",
+      "faq2A": "Chaque forfait de fête d'anniversaire pour enfants comprend: location de lieu de fête privé (pas de partage!), hôte de fête dédié, tables et chaises pour tous les invités, accès à une cuisine complète, télévision et système audio pour la musique et les vidéos, et votre choix de décorations d'anniversaire thématiques. Parfait pour les fêtes d'enfants à {{location}}!",
+      "faq3Q": "Combien d'enfants peuvent assister à une fête d'anniversaire dans votre lieu à {{location}}?",
+      "faq3A": "Notre lieu de fête d'anniversaire pour enfants peut accueillir confortablement jusqu'à 20 enfants plus les parents et tuteurs. L'espace privé de 1500 pieds carrés est idéal pour les fêtes d'anniversaire pour enfants, offrant beaucoup d'espace pour les activités, les jeux et la célébration pour les familles de {{location}}.",
+      "faq4Q": "Fournissez-vous le gâteau d'anniversaire et la nourriture pour les fêtes d'enfants à {{location}}?",
+      "faq4A": "Vous apportez le gâteau d'anniversaire et la nourriture de fête de votre enfant - nous nous occupons de tout le reste! Notre lieu de fête comprend un accès complet à la cuisine. Nous offrons également des activités supplémentaires populaires comme la décoration de cupcakes, la fabrication de glaces et la création de bracelets pour rendre votre fête d'anniversaire à {{location}} encore plus spéciale.",
+      "faq5Q": "Pour quels âges vos fêtes d'anniversaire à {{location}} sont-elles adaptées?",
+      "faq5A": "Le Centre Funtastique organise des fêtes d'anniversaire pour enfants de 2 à 12 ans. Nos fêtes d'anniversaire thématiques, activités et espace de fête sont spécialement conçus pour les jeunes enfants, faisant de nous le premier choix pour les célébrations d'anniversaire à {{location}}.",
+      "faq6Q": "Comment réserver une fête d'anniversaire pour enfants près de {{location}}?",
+      "faq6A": "Réserver la fête d'anniversaire de votre enfant est facile! Appelez-nous au (514) 715-1432 ou remplissez notre formulaire de contact en ligne. Nous vous aiderons à choisir le thème d'anniversaire parfait, à sélectionner des activités et à planifier votre heure de fête privée. La plupart des familles de {{location}} réservent 2 à 4 semaines à l'avance pour les fêtes d'anniversaire du week-end.",
+      "contactTitle": "Contactez le Centre Funtastique - Lieu de fête d'anniversaire desservant {{location}}",
+      "contactDesc": "Prêt à réserver la fête d'anniversaire de votre enfant? Contactez-nous dès aujourd'hui!",
+      "centreName": "Centre Funtastique",
+      "addressLabel": "Adresse",
+      "addressLine1": "3551 Rue Bélair",
+      "addressLine2": "Montréal, QC H2A 2B1",
+      "hoursTitle": "Heures pour les fêtes d'anniversaire",
+      "weekendParties": "Fêtes de fin de semaine",
+      "weekendHours": "Samedi - Dimanche: 10h00 - 20h00",
+      "weekdayParties": "Fêtes en semaine",
+      "weekdayHours": "Lundi - Vendredi: Sur rendez-vous",
+      "servingNote": "Au service des familles de {{location}} avec locations de lieu de fête privé et forfaits de fête thématiques.",
+      "ctaTitle": "Réservez la fête d'anniversaire de votre enfant à {{location}} aujourd'hui!",
+      "ctaDesc": "Rejoignez des centaines de familles de {{location}} qui font confiance au Centre Funtastique pour les fêtes d'anniversaire de leurs enfants! Nous sommes le lieu de fête d'anniversaire le mieux noté près de {{location}}.",
+      "bookPartyButton": "Réservez votre fête d'anniversaire aujourd'hui",
+      "callButton": "Appeler",
+      "directionsTitle": "Directions depuis {{location}}"
     }
   }
 }

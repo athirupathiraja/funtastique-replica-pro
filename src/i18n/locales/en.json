@@ -5,17 +5,27 @@
     "locations": "Locations",
     "about": "About Us",
     "contact": "Contact",
-    "reviews": "Reviews"
+    "reviews": "Reviews",
+    "bookNow": "Book Now"
   },
   "hero": {
     "topper": "Centre FUNtastique",
     "title": "Private Rental Space for Children's Events",
+    "titleLine1": "Private Rental",
+    "titleLine2": "Space for Children's",
+    "titleLine3": "Events",
     "text": "We handle the setup so you can have a funtastique time.",
     "getStarted": "Get Started"
   },
   "gallery": {
     "title": "Our Gallery",
     "subtitle": "✨ Tap any image for a FUNtastique close-up view of our space & activities! ✨"
+  },
+  "panorama": {
+    "title": "Experience Our Space",
+    "subtitle": "Panoramic view of Centre Funtastique",
+    "description": "✨ Hover over the image to explore our space! ✨",
+    "dragHint": "Drag to look around"
   },
   "services": {
     "title": "What's Included in Your Funtastique Package",
@@ -59,6 +69,37 @@
       "phone": "Phone",
       "message": "Write message...",
       "submit": "Send Message"
+    },
+    "map": {
+      "findUs": "Find Us",
+      "visitUs": "Visit us at our location in Montréal"
+    },
+    "page": {
+      "heroTitle": "Book Your",
+      "heroSubtitle": "Funtastique Party!",
+      "heroDescription": "Select your date, choose your theme, and we'll create an unforgettable celebration.",
+      "pickDate": "Pick a Date",
+      "choosePartyDay": "Choose your party day",
+      "partyDetails": "Party Details",
+      "tellUsAbout": "Tell us about your celebration",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your@email.com",
+      "phonePlaceholder": "Your phone number",
+      "selectTheme": "Select a theme",
+      "selectTimeSlot": "Select time slot",
+      "selectPartySize": "Party size",
+      "messagePlaceholder": "Any special requests or questions?",
+      "bookingSuccess": "Booking Request Sent!",
+      "bookingSuccessDesc": "We'll get back to you within 24 hours to confirm your party details.",
+      "mondaysClosed": "Mondays are closed for maintenance",
+      "customTheme": "Custom Theme",
+      "callUs": "Call Us",
+      "emailUs": "Email Us",
+      "visitUs": "Visit Us",
+      "hoursWeekday": "Mon-Fri: By Appointment",
+      "hoursWeekend": "Sat-Sun: 10 AM - 8 PM",
+      "respondTime": "We respond within 24 hours",
+      "getDirections": "Get Directions"
     }
   },
   "reviews": {
@@ -70,7 +111,21 @@
     "moreReviewsTitle": "More from Our Funtastique Families",
     "ctaTitle": "Had a Funtastique Time?",
     "ctaDescription": "We'd love to hear about your experience! New reviews help us and help other parents planning their perfect party.",
-    "ctaButton": "Leave a Review on Google"
+    "ctaButton": "Leave a Review on Google",
+    "homeReviews": {
+      "review1": {
+        "text": "We booked this place for our daughter's bday party and it was absolutely perfect! The space is clean, colorful, and has everything you need. The host was amazing and helped with setup and cleanup. Highly recommend!",
+        "author": "Bhumika Tandon"
+      },
+      "review2": {
+        "text": "We just held a Frozen themed party for our 5 year old and it was magical! The decorations were beautiful and the kids had an amazing time. The host was so helpful and patient with all the kids. Worth every penny!",
+        "author": "Sue"
+      },
+      "review3": {
+        "text": "Fantastic place to do a kid's party! Private space, great host, and so many activities to keep the kids entertained. Parents could actually relax and enjoy the party. Will definitely book again!",
+        "author": "Mike Davoli"
+      }
+    }
   },
   "faq": {
     "topper": "FAQ",
@@ -301,7 +356,63 @@
       "service4Desc": "Book your child's birthday party on weekends (10 AM - 8 PM) or weekdays by appointment. Convenient party times for {{location}} families.",
       "themesTitle": "Popular Kids Birthday Party Themes for {{location}} Children",
       "themesDesc": "Transform your child's birthday party with our themed party packages! Each children's birthday theme includes custom decorations, age-appropriate activities, and supplies. Perfect for kids birthday celebrations in {{location}}.",
-      "viewAllThemes": "View All Themes"
+      "viewAllThemes": "View All Themes",
+      "neighborhoodsTitle": "Kids Birthday Party Venue Serving All {{location}} Neighborhoods",
+      "neighborhoodsDesc": "Centre Funtastique proudly serves children's birthday parties across all {{location}} neighborhoods. Our private kids party venue is easily accessible from these areas:",
+      "benefitsTitle": "What Makes Centre Funtastique the Best Kids Birthday Party Venue Near {{location}}?",
+      "benefitsDesc": "Centre Funtastique has been hosting memorable children's birthday parties for {{location}} families since 2020. Here's why parents choose us for their kids birthday celebrations:",
+      "benefit1Title": "100% Private Birthday Party Venue",
+      "benefit1Desc": "Unlike other kids party venues in {{location}}, our 1500 sq ft space is exclusively yours for your child's birthday party. No sharing with other parties means more privacy, flexibility, and a truly personalized children's birthday celebration.",
+      "benefit2Title": "Professional Kids Party Hosting",
+      "benefit2Desc": "Every birthday party includes an experienced party host who manages activities, entertains children, serves food, and handles cleanup. {{location}} parents love that they can actually enjoy their child's birthday party instead of working through it!",
+      "benefit3Title": "Themed Birthday Party Packages",
+      "benefit3Desc": "From Frozen birthday parties to Princess parties, Cupcake decorating to Bracelet making - our themed kids birthday packages make planning easy for {{location}} families. Each theme includes decorations, activities, and supplies.",
+      "benefit4Title": "Everything Kids Need for Birthday Fun",
+      "benefit4Desc": "Our children's birthday party venue includes toys, games, tables, chairs, full kitchen, TV, sound system, and party supplies. Perfect for active kids birthday celebrations in {{location}} - rain or shine!",
+      "benefit5Title": "Convenient Location for {{location}}",
+      "benefit5Desc": "Located just {{distance}}, Centre Funtastique is easily accessible for birthday party guests from {{location}}. Ample parking makes arrival and pickup smooth for kids birthday parties.",
+      "benefit6Title": "Stress-Free Kids Birthday Parties",
+      "benefit6Desc": "We handle setup, hosting, activities, and cleanup for your child's birthday party. {{location}} parents consistently rate us 5 stars for making kids birthday celebrations easy, affordable, and unforgettable!",
+      "testimonialsTitle": "What {{location}} Parents Say About Our Kids Birthday Parties",
+      "testimonialsDesc": "Real reviews from families who hosted children's birthday parties at Centre Funtastique",
+      "testimonial1": "Best kids birthday party venue near {{location}}! The private space made our daughter's 6th birthday party so special. The party host was amazing with the children and the Frozen theme decorations were beautiful!",
+      "testimonial1Author": "Sarah M., {{location}}",
+      "testimonial2": "Centre Funtastique made our son's birthday party stress-free! They handled everything - setup, activities, cleanup. All we did was show up and enjoy. Highly recommend for {{location}} families!",
+      "testimonial2Author": "Michael T., {{location}}",
+      "testimonial3": "Perfect kids birthday party venue! The cupcake decorating activity was a huge hit. 20 children had a blast and parents could relax. Worth the short drive from {{location}}!",
+      "testimonial3Author": "Jessica L., {{location}}",
+      "readMoreReviews": "Read More Reviews from {{location}} Families",
+      "faqTitle": "Kids Birthday Party FAQs - {{location}}",
+      "faqDesc": "Common questions about children's birthday parties from {{location}} families",
+      "faq1Q": "How far is Centre Funtastique kids birthday party venue from {{location}}?",
+      "faq1A": "Our children's birthday party venue is conveniently located {{distance}} from {{location}}. We serve families throughout {{location}} and surrounding areas for kids birthday parties, making us the perfect choice for your child's celebration.",
+      "faq2Q": "What's included in your {{location}} kids birthday party package?",
+      "faq2A": "Every children's birthday party package includes: private party venue rental (no sharing!), dedicated birthday party host, tables & chairs for all guests, full kitchen access, TV & sound system for music and videos, and your choice of themed birthday decorations. Perfect for kids parties in {{location}}!",
+      "faq3Q": "How many children can attend a birthday party at your {{location}} venue?",
+      "faq3A": "Our kids birthday party venue comfortably accommodates up to 20 children plus parents and guardians. The 1500 sq ft private space is ideal for children's birthday parties, providing plenty of room for activities, games, and celebration for {{location}} families.",
+      "faq4Q": "Do you provide birthday cake and food for kids parties in {{location}}?",
+      "faq4A": "You bring your child's birthday cake and party food - we handle everything else! Our birthday party venue includes full kitchen access. We also offer popular add-on activities like cupcake decorating, ice cream making, and bracelet crafting to make your {{location}} kids birthday party extra special.",
+      "faq5Q": "What ages are your {{location}} birthday parties suitable for?",
+      "faq5A": "Centre Funtastique hosts children's birthday parties for kids ages 2-12. Our themed birthday parties, activities, and party space are designed specifically for young children, making us the top choice for kids birthday celebrations in {{location}}.",
+      "faq6Q": "How do I book a kids birthday party near {{location}}?",
+      "faq6A": "Booking your child's birthday party is easy! Call us at (514) 715-1432 or fill out our online contact form. We'll help you choose the perfect birthday theme, select activities, and schedule your private party time. Most {{location}} families book 2-4 weeks in advance for weekend birthday parties.",
+      "contactTitle": "Contact Centre Funtastique - Kids Birthday Party Venue Serving {{location}}",
+      "contactDesc": "Ready to book your child's birthday party? Contact us today!",
+      "centreName": "Centre Funtastique",
+      "addressLabel": "Address",
+      "addressLine1": "3551 Rue Bélair",
+      "addressLine2": "Montréal, QC H2A 2B1",
+      "hoursTitle": "Kids Birthday Party Hours",
+      "weekendParties": "Weekend Parties",
+      "weekendHours": "Saturday - Sunday: 10:00 AM - 8:00 PM",
+      "weekdayParties": "Weekday Parties",
+      "weekdayHours": "Monday - Friday: By Appointment",
+      "servingNote": "Serving {{location}} families with private kids birthday party venue rentals and themed party packages.",
+      "ctaTitle": "Book Your Child's Birthday Party in {{location}} Today!",
+      "ctaDesc": "Join hundreds of {{location}} families who trust Centre Funtastique for their children's birthday parties! We're the top-rated kids birthday party venue near {{location}}.",
+      "bookPartyButton": "Book Your Birthday Party Today",
+      "callButton": "Call",
+      "directionsTitle": "Directions from {{location}}"
     }
   }
 }

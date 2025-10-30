@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Phone, Mail, MapPin, Clock, Calendar as CalendarIcon, Users, PartyPopper, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,8 +9,12 @@ import { toast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { format } from "date-fns";
+import { useTranslation } from "react-i18next";
+import { useSearchParams } from "react-router-dom";
 
 const Contact = () => {
+  const { t } = useTranslation();
+  const [searchParams] = useSearchParams();
   const [date, setDate] = useState<Date>();
   const [formData, setFormData] = useState({
     name: "",
@@ -22,23 +26,58 @@ const Contact = () => {
     timeSlot: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+    // Pre-select theme from URL parameter
+    const themeParam = searchParams.get('theme');
+    if (themeParam) {
+      setFormData(prev => ({ ...prev, theme: themeParam }));
+    }
+  }, [searchParams]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "🎉 Booking Request Sent!",
-      description: "We'll get back to you within 24 hours to confirm your party details.",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "", partySize: "", theme: "", timeSlot: "" });
-    setDate(undefined);
+    
+    const form = e.target as HTMLFormElement;
+    const formDataToSend = new FormData(form);
+    
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend
+      });
+      
+      if (response.ok) {
+        toast({
+          title: `🎉 ${t('contact.page.bookingSuccess')}`,
+          description: t('contact.page.bookingSuccessDesc'),
+        });
+        setFormData({ name: "", email: "", phone: "", message: "", partySize: "", theme: "", timeSlot: "" });
+        setDate(undefined);
+      } else {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again or contact us directly.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Unable to send message. Please contact us directly via phone or email.",
+        variant: "destructive"
+      });
+    }
   };
 
   const themes = [
-    { value: "frozen", label: "❄️ Frozen Party", icon: "❄️" },
-    { value: "princess", label: "👑 Princess Party", icon: "👑" },
-    { value: "cupcake", label: "🧁 Cupcake Decorating", icon: "🧁" },
-    { value: "bracelet", label: "💎 Bracelet Making", icon: "💎" },
-    { value: "cartoon", label: "🎨 Cartoon Party", icon: "🎨" },
-    { value: "custom", label: "✨ Custom Theme", icon: "✨" }
+    { value: "frozen", labelKey: "themes.frozen.title", icon: "❄️" },
+    { value: "princess", labelKey: "themes.princess.title", icon: "👑" },
+    { value: "cupcake", labelKey: "themes.cupcake.title", icon: "🧁" },
+    { value: "bracelet", labelKey: "themes.bracelet.title", icon: "💎" },
+    { value: "cartoon", labelKey: "themes.cartoon.title", icon: "🎨" },
+    { value: "custom", labelKey: "contact.page.customTheme", icon: "✨" }
   ];
 
   const timeSlots = [
@@ -100,12 +139,19 @@ const Contact = () => {
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight animate-fade-in">
-            <span className="block text-foreground">Book Your</span>
-            <span className="block text-primary">Funtastique Party!</span>
+            <span className="block text-foreground">{t('contact.page.heroTitle')}</span>
+            <span className="block text-primary">{t('contact.page.heroSubtitle')}</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto font-medium animate-fade-in">
-            Select your date, choose your theme, and we'll create an <span className="text-primary font-bold">unforgettable celebration</span>.
+            {t('contact.page.heroDescription').split('unforgettable celebration').map((part, i, arr) => (
+              i < arr.length - 1 ? (
+                <span key={i}>
+                  {part}
+                  <span className="text-primary font-bold">unforgettable celebration</span>
+                </span>
+              ) : part
+            ))}
           </p>
         </div>
         
@@ -118,21 +164,21 @@ const Contact = () => {
       </section>
 
       {/* Booking Form Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-1 md:px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
             {/* Left Column - Calendar (2/5 width) */}
             <div className="lg:col-span-2">
               <div className="sticky top-24">
-                <div className="bg-white rounded-2xl shadow-xl p-6 border-2 border-primary/10 animate-scale-in">
+                <div className="bg-white rounded-2xl shadow-xl p-3 md:p-6 border-2 border-primary/10 animate-scale-in">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center">
                       <CalendarIcon className="w-6 h-6 text-white" />
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-foreground">Pick a Date</h3>
-                      <p className="text-sm text-muted-foreground">Choose your party day</p>
-                    </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">{t('contact.page.pickDate')}</h3>
+                    <p className="text-sm text-muted-foreground">{t('contact.page.choosePartyDay')}</p>
+                  </div>
                   </div>
                   
                   <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-4">
@@ -177,7 +223,7 @@ const Contact = () => {
 
                   <div className="mt-6 pt-6 border-t border-border">
                     <p className="text-xs text-muted-foreground text-center">
-                      💡 Mondays are closed for maintenance
+                      💡 {t('contact.page.mondaysClosed')}
                     </p>
                   </div>
                 </div>
@@ -186,28 +232,38 @@ const Contact = () => {
 
             {/* Right Column - Booking Form (3/5 width) */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-primary/10 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              <div className="bg-white rounded-2xl shadow-xl p-4 md:p-8 border-2 border-primary/10 animate-fade-in" style={{ animationDelay: "0.1s" }}>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center">
                     <PartyPopper className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground">Party Details</h3>
-                    <p className="text-sm text-muted-foreground">Tell us about your celebration</p>
+                    <h3 className="text-2xl font-bold text-foreground">{t('contact.page.partyDetails')}</h3>
+                    <p className="text-sm text-muted-foreground">{t('contact.page.tellUsAbout')}</p>
                   </div>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Web3Forms Access Key */}
+                  <input type="hidden" name="access_key" value="fb8476d5-ce6b-4882-8fe5-005695e51850" />
+                  
+                  {/* Honeypot Spam Protection */}
+                  <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+                  
+                  {/* Hidden Date Field */}
+                  <input type="hidden" name="date" value={date ? format(date, 'PPP') : ''} />
+                  
                   {/* Contact Information */}
                   <div className="space-y-4">
                     <h4 className="font-semibold text-foreground flex items-center gap-2">
                       <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center text-primary text-xs font-bold">1</div>
-                      Contact Information
+                      {t('contact.form.name')}
                     </h4>
                     <div className="grid md:grid-cols-2 gap-4">
                       <Input
                         type="text"
-                        placeholder="Your Name *"
+                        name="name"
+                        placeholder={`${t('contact.page.namePlaceholder')} *`}
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                         required
@@ -215,7 +271,8 @@ const Contact = () => {
                       />
                       <Input
                         type="tel"
-                        placeholder="Phone Number *"
+                        name="phone"
+                        placeholder={`${t('contact.page.phonePlaceholder')} *`}
                         value={formData.phone}
                         onChange={(e) => setFormData({...formData, phone: e.target.value})}
                         required
@@ -224,7 +281,8 @@ const Contact = () => {
                     </div>
                     <Input
                       type="email"
-                      placeholder="Email Address *"
+                      name="email"
+                      placeholder={`${t('contact.page.emailPlaceholder')} *`}
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
                       required
@@ -236,7 +294,7 @@ const Contact = () => {
                   <div className="space-y-4 pt-4">
                     <h4 className="font-semibold text-foreground flex items-center gap-2">
                       <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center text-primary text-xs font-bold">2</div>
-                      Party Preferences
+                      {t('contact.page.partyDetails')}
                     </h4>
                     
                     <div className="grid md:grid-cols-2 gap-4">
@@ -244,11 +302,11 @@ const Contact = () => {
                       <div>
                         <label className="text-sm font-medium text-muted-foreground mb-2 block flex items-center gap-2">
                           <Users className="w-4 h-4" />
-                          Number of Children
+                          {t('contact.page.selectPartySize')}
                         </label>
-                        <Select value={formData.partySize} onValueChange={(value) => setFormData({...formData, partySize: value})}>
+                        <Select name="partySize" value={formData.partySize} onValueChange={(value) => setFormData({...formData, partySize: value})}>
                           <SelectTrigger className="h-12 border-2 focus:border-primary">
-                            <SelectValue placeholder="Select party size" />
+                            <SelectValue placeholder={t('contact.page.selectPartySize')} />
                           </SelectTrigger>
                           <SelectContent>
                             {partySizes.map((size) => (
@@ -256,17 +314,18 @@ const Contact = () => {
                             ))}
                           </SelectContent>
                         </Select>
+                        <input type="hidden" name="partySize" value={formData.partySize} />
                       </div>
 
                       {/* Time Slot */}
                       <div>
                         <label className="text-sm font-medium text-muted-foreground mb-2 block flex items-center gap-2">
                           <Clock className="w-4 h-4" />
-                          Preferred Time
+                          {t('contact.page.selectTimeSlot')}
                         </label>
-                        <Select value={formData.timeSlot} onValueChange={(value) => setFormData({...formData, timeSlot: value})}>
+                        <Select name="timeSlot" value={formData.timeSlot} onValueChange={(value) => setFormData({...formData, timeSlot: value})}>
                           <SelectTrigger className="h-12 border-2 focus:border-primary">
-                            <SelectValue placeholder="Select time slot" />
+                            <SelectValue placeholder={t('contact.page.selectTimeSlot')} />
                           </SelectTrigger>
                           <SelectContent>
                             {timeSlots.map((slot) => (
@@ -274,6 +333,7 @@ const Contact = () => {
                             ))}
                           </SelectContent>
                         </Select>
+                        <input type="hidden" name="timeSlot" value={formData.timeSlot} />
                       </div>
                     </div>
 
@@ -281,20 +341,21 @@ const Contact = () => {
                     <div>
                       <label className="text-sm font-medium text-muted-foreground mb-2 block flex items-center gap-2">
                         <PartyPopper className="w-4 h-4" />
-                        Party Theme
+                        {t('contact.page.selectTheme')}
                       </label>
-                      <Select value={formData.theme} onValueChange={(value) => setFormData({...formData, theme: value})}>
+                      <Select name="theme" value={formData.theme} onValueChange={(value) => setFormData({...formData, theme: value})}>
                         <SelectTrigger className="h-12 border-2 focus:border-primary">
-                          <SelectValue placeholder="Choose a theme (optional)" />
+                          <SelectValue placeholder={t('contact.page.selectTheme')} />
                         </SelectTrigger>
                         <SelectContent>
                           {themes.map((theme) => (
                             <SelectItem key={theme.value} value={theme.value}>
-                              {theme.label}
+                              {theme.icon} {t(theme.labelKey)}
                             </SelectItem>
                           ))}
                         </SelectContent>
                       </Select>
+                      <input type="hidden" name="theme" value={formData.theme} />
                     </div>
                   </div>
 
@@ -302,10 +363,11 @@ const Contact = () => {
                   <div className="space-y-4 pt-4">
                     <h4 className="font-semibold text-foreground flex items-center gap-2">
                       <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center text-primary text-xs font-bold">3</div>
-                      Additional Information
+                      {t('contact.form.message')}
                     </h4>
                     <Textarea
-                      placeholder="Any special requests, dietary restrictions, or questions? Let us know!"
+                      name="message"
+                      placeholder={t('contact.page.messagePlaceholder')}
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                       className="min-h-[120px] text-base border-2 focus:border-primary transition-colors resize-none"
@@ -320,10 +382,10 @@ const Contact = () => {
                       className="w-full h-14 text-lg font-bold bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-white shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
                     >
                       <PartyPopper className="w-5 h-5 mr-2" />
-                      Send Booking Request
+                      {t('contact.form.submit')}
                     </Button>
                     <p className="text-xs text-muted-foreground text-center mt-3">
-                      We'll confirm your booking within 24 hours
+                      {t('contact.page.bookingSuccessDesc')}
                     </p>
                   </div>
                 </form>
@@ -339,40 +401,40 @@ const Contact = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {/* Phone */}
             <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow animate-fade-in">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mb-4">
-                <Phone className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center mb-4 text-3xl">
+                📞
               </div>
-              <h3 className="font-bold text-lg mb-2">Call Us</h3>
+              <h3 className="font-bold text-lg mb-2">{t('contact.page.callUs')}</h3>
               <a href="tel:+15147151432" className="text-primary hover:text-primary/80 transition-colors font-medium">
-                +1 (514) 715-1432
+                {t('contact.phone.value')}
               </a>
-              <p className="text-sm text-muted-foreground mt-2">Mon-Fri: By Appointment<br/>Sat-Sun: 10 AM - 8 PM</p>
+              <p className="text-sm text-muted-foreground mt-2">{t('contact.page.hoursWeekday')}<br/>{t('contact.page.hoursWeekend')}</p>
             </div>
 
             {/* Email */}
             <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              <div className="w-14 h-14 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center mb-4">
-                <Mail className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center mb-4 text-3xl">
+                ✉️
               </div>
-              <h3 className="font-bold text-lg mb-2">Email Us</h3>
+              <h3 className="font-bold text-lg mb-2">{t('contact.page.emailUs')}</h3>
               <a href="mailto:centrefuntastique@gmail.com" className="text-primary hover:text-primary/80 transition-colors font-medium break-all">
-                centrefuntastique@gmail.com
+                {t('contact.email.value')}
               </a>
-              <p className="text-sm text-muted-foreground mt-2">We respond within 24 hours</p>
+              <p className="text-sm text-muted-foreground mt-2">{t('contact.page.respondTime')}</p>
             </div>
 
             {/* Location */}
             <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <div className="w-14 h-14 bg-gradient-to-br from-primary-light to-secondary rounded-full flex items-center justify-center mb-4">
-                <MapPin className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 bg-gradient-to-br from-primary-light to-secondary rounded-full flex items-center justify-center mb-4 text-3xl">
+                📍
               </div>
-              <h3 className="font-bold text-lg mb-2">Visit Us</h3>
+              <h3 className="font-bold text-lg mb-2">{t('contact.page.visitUs')}</h3>
               <p className="text-muted-foreground">
-                3551 Rue Bélair<br />
-                Montréal, QC H2A 2B1
+                {t('locations.detail.addressLine1')}<br />
+                {t('locations.detail.addressLine2')}
               </p>
               <a href="https://maps.google.com/?q=3551+Rue+Bélair+Montréal" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:text-primary/80 transition-colors font-medium mt-2 inline-block">
-                Get Directions →
+                {t('contact.page.getDirections')} →
               </a>
             </div>
           </div>
@@ -394,6 +456,24 @@ const Contact = () => {
               title="Centre Funtastique Location"
             ></iframe>
           </div>
+        </div>
+      </section>
+
+      {/* Trust Badge */}
+      <section className="py-8 px-4 bg-white border-t">
+        <div className="container mx-auto max-w-4xl text-center">
+          <p className="text-sm text-muted-foreground">
+            Website crafted with care by{' '}
+            <a 
+              href="https://griffinstudios.ca" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-semibold"
+            >
+              Griffin Studios
+            </a>
+            {' '}— Web solutions for growing businesses
+          </p>
         </div>
       </section>
 

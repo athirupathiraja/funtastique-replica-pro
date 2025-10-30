@@ -17,8 +17,12 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center space-y-8">
           {/* Logo */}
-          <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-full flex items-center justify-center">
-            <div className="w-10 h-10 border-6 border-white rounded-full border-r-transparent transform rotate-45"></div>
+          <div>
+            <img 
+              src="/assets/images/funlogo.svg" 
+              alt="Centre Funtastique" 
+              className="h-16 w-auto"
+            />
           </div>
 
           {/* Navigation */}
@@ -74,9 +78,21 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <p className="text-muted-foreground text-sm text-center">
-            {t('footer.copyright')}
-          </p>
+          <div className="text-muted-foreground text-sm text-center space-y-1">
+            <p>© Copyright 2025 - Centre Funtastique</p>
+            <p>
+              Website crafted with care by{' '}
+              <a 
+                href="https://griffinstudios.ca" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline font-semibold"
+              >
+                Griffin Studios
+              </a>
+              {' '}— Web solutions for growing businesses
+            </p>
+          </div>
         </div>
       </div>
     </footer>

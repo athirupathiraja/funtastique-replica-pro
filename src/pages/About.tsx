@@ -1,10 +1,18 @@
 import { Shield, Sparkles, Coffee } from "lucide-react";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
   const { t } = useTranslation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -165,6 +173,49 @@ const About = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white via-primary/5 to-white border-t border-b relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-10 right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Ready to Create Unforgettable Memories?
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Let us handle the details while you enjoy the celebration. Book your Funtastique party today!
+          </p>
+          <Link to="/contact">
+            <Button 
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-white text-lg font-semibold px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all"
+            >
+              Book Your Party Now
+            </Button>
+          </Link>
+        </div>
+      </section>
+
+      {/* Crafted By Section */}
+      <section className="py-8 px-4 bg-muted/20">
+        <div className="container mx-auto max-w-4xl text-center">
+          <p className="text-sm text-muted-foreground">
+            Website crafted with care by{' '}
+            <a 
+              href="https://griffinstudios.ca" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-semibold"
+            >
+              Griffin Studios
+            </a>
+            {' '}— Premium web solutions for growing businesses
+          </p>
         </div>
       </section>
 

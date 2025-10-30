@@ -1,21 +1,22 @@
 import { Star, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const ReviewsAndContact = () => {
   const { t } = useTranslation();
   const reviews = [
     {
-      text: "We booked this place for our daughter's bday party and it was absolutely perfect! The space is clean, colorful, and has everything you need. The host was amazing and helped with setup and cleanup. Highly recommend!",
-      author: "Bhumika Tandon",
+      text: t('reviews.homeReviews.review1.text'),
+      author: t('reviews.homeReviews.review1.author'),
     },
     {
-      text: "We just held a Frozen themed party for our 5 year old and it was magical! The decorations were beautiful and the kids had an amazing time. The host was so helpful and patient with all the kids. Worth every penny!",
-      author: "Sue",
+      text: t('reviews.homeReviews.review2.text'),
+      author: t('reviews.homeReviews.review2.author'),
     },
     {
-      text: "Fantastic place to do a kid's party! Private space, great host, and so many activities to keep the kids entertained. Parents could actually relax and enjoy the party. Will definitely book again!",
-      author: "Mike Davoli",
+      text: t('reviews.homeReviews.review3.text'),
+      author: t('reviews.homeReviews.review3.author'),
     },
   ];
 
@@ -45,12 +46,14 @@ const ReviewsAndContact = () => {
             </div>
 
             <div className="text-center pt-4">
-              <Button
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white py-6 text-lg font-semibold rounded-full transition-all px-8"
-              >
-                {t('reviews.submit')}
-              </Button>
+              <Link to="/reviews">
+                <Button
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary hover:text-white py-6 text-lg font-semibold rounded-full transition-all px-8"
+                >
+                  {t('reviews.submit')}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
