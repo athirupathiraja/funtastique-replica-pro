@@ -129,12 +129,12 @@ const ThemedParties = () => {
             ))}
           </p>
           
-          <Button 
+          <Button
             onClick={scrollToThemes}
             size="lg"
-            className="bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-white px-16 py-8 text-xl font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 animate-scale-in"
+            className="bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-white px-8 md:px-16 py-6 md:py-8 text-lg md:text-xl font-bold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 animate-scale-in"
           >
-            🎉 {t('themedParties.seeAllThemes')} 🎉
+            {t('themedParties.seeAllThemes')}
             <ArrowDown className="ml-2 w-5 h-5" />
           </Button>
         </div>

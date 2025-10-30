@@ -277,91 +277,95 @@ const Header = () => {
                   </div>
 
                   {/* Navigation Links */}
-                  <nav className="flex-1 flex flex-col py-6">
+                  <nav className="flex-1 flex flex-col py-3 overflow-y-auto">
                     <Link
                       to="/"
                       onClick={closeMobileMenu}
-                      className="px-6 py-4 text-lg font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
+                      className="px-5 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
                     >
                       {t('nav.home')}
                     </Link>
                     <Link
                       to="/themed-parties"
                       onClick={closeMobileMenu}
-                      className="px-6 py-4 text-lg font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
+                      className="px-5 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
                     >
                       {t('nav.themedParties')}
                     </Link>
                     <Link
                       to="/locations"
                       onClick={closeMobileMenu}
-                      className="px-6 py-4 text-lg font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
+                      className="px-5 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
                     >
                       {t('nav.locations')}
                     </Link>
                     <Link
                       to="/about"
                       onClick={closeMobileMenu}
-                      className="px-6 py-4 text-lg font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
+                      className="px-5 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
                     >
                       {t('nav.about')}
                     </Link>
                     <Link
                       to="/contact"
                       onClick={closeMobileMenu}
-                      className="px-6 py-4 text-lg font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
+                      className="px-5 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
                     >
                       {t('nav.contact')}
                     </Link>
                     <Link
                       to="/reviews"
                       onClick={closeMobileMenu}
-                      className="px-6 py-4 text-lg font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
+                      className="px-5 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
                     >
                       {t('nav.reviews')}
                     </Link>
                     {isHomePage && (
                       <button
                         onClick={() => scrollToSection("faq")}
-                        className="px-6 py-4 text-lg font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors text-left"
+                        className="px-5 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-primary/5 transition-colors text-left"
                       >
                         FAQ
                       </button>
                     )}
 
                     {/* Divider */}
-                    <div className="my-4 mx-6 border-t border-border"></div>
+                    <div className="my-2 mx-5 border-t border-border"></div>
 
                     {/* Phone Number */}
                     <a 
                       href="tel:+15147151432"
-                      className="px-6 py-3 flex items-center gap-3 text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
+                      className="px-5 py-2 flex items-center gap-3 text-foreground hover:text-primary hover:bg-primary/5 transition-colors"
                     >
                       <Phone className="w-5 h-5 text-primary" />
                       <span className="font-medium">(514) 715-1432</span>
                     </a>
-                  </nav>
 
-                  {/* Bottom Section - Language Toggle & Book Now */}
-                  <div className="border-t p-6 space-y-3 bg-muted/20">
+                    {/* Divider */}
+                    <div className="my-2 mx-5 border-t border-border"></div>
+
                     {/* Language Toggle */}
-                    <Button 
-                      onClick={toggleLanguage}
-                      variant="outline" 
-                      className="w-full border-primary text-primary hover:bg-primary hover:text-white h-12 text-base font-medium"
-                    >
-                      {i18n.language === 'en' ? 'Français (FR)' : 'English (EN)'}
-                    </Button>
+                    <div className="px-5 py-2">
+                      <Button 
+                        onClick={toggleLanguage}
+                        variant="outline" 
+                        className="w-full border-primary text-primary hover:bg-primary hover:text-white h-10 text-sm font-medium"
+                      >
+                        {i18n.language === 'en' ? 'Français (FR)' : 'English (EN)'}
+                      </Button>
+                    </div>
 
                     {/* Book Now CTA */}
-                    <Link to="/contact" onClick={closeMobileMenu} className="block">
-                      <Button 
-                        className="w-full bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-white h-14 text-lg font-bold shadow-lg"
-                      >
-                        🎉 {t('nav.bookNow')}
-                      </Button>
-                    </Link>
-                  </div>
+                    <div className="px-5 pb-4">
+                      <Link to="/contact" onClick={closeMobileMenu} className="block">
+                        <Button 
+                          className="w-full bg-gradient-to-r from-primary to-primary-light hover:from-primary/90 hover:to-primary-light/90 text-white h-12 text-base font-bold shadow-lg"
+                        >
+                          {t('nav.bookNow')}
+                        </Button>
+                      </Link>
+                    </div>
+                  </nav>
                 </div>
               </SheetContent>
             </Sheet>
