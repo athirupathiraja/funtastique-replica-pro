@@ -11,47 +11,56 @@ const Gallery = () => {
     { 
       id: 1, 
       url: "/assets/images/final_pics/desktop/centre_playground.webp",
-      mobileUrl: "/assets/images/final_pics/mobile/centre_playground.webp"
+      mobileUrl: "/assets/images/final_pics/mobile/centre_playground.webp",
+      alt: "Centre Funtastique indoor playground with colorful equipment and toys for kids birthday parties"
     },
     { 
       id: 2, 
       url: "/assets/images/final_pics/desktop/centre_white_view.webp",
-      mobileUrl: "/assets/images/final_pics/mobile/centre_white_view.webp"
+      mobileUrl: "/assets/images/final_pics/mobile/centre_white_view.webp",
+      alt: "Private party venue space at Centre Funtastique with elegant white decor"
     },
     { 
       id: 3, 
       url: "/assets/images/final_pics/desktop/green_centre_view.webp",
-      mobileUrl: "/assets/images/final_pics/mobile/green_centre_view.webp"
+      mobileUrl: "/assets/images/final_pics/mobile/green_centre_view.webp",
+      alt: "Centre Funtastique party venue with green themed decorations"
     },
     { 
       id: 4, 
       url: "/assets/images/final_pics/desktop/ftq_bracelets.webp",
-      mobileUrl: "/assets/images/final_pics/mobile/ftq_bracelets.webp"
+      mobileUrl: "/assets/images/final_pics/mobile/ftq_bracelets.webp",
+      alt: "Colorful friendship bracelets made at Centre Funtastique bracelet making party activity"
     },
     { 
       id: 5, 
       url: "/assets/images/final_pics/desktop/cupcakes_1.webp",
-      mobileUrl: "/assets/images/final_pics/mobile/cupcakes_1.webp"
+      mobileUrl: "/assets/images/final_pics/mobile/cupcakes_1.webp",
+      alt: "Decorated cupcakes from Centre Funtastique cupcake decorating party activity"
     },
     { 
       id: 7, 
       url: "/assets/images/final_pics/desktop/ftq_deco.webp",
-      mobileUrl: "/assets/images/final_pics/mobile/ftq_deco.webp"
+      mobileUrl: "/assets/images/final_pics/mobile/ftq_deco.webp",
+      alt: "Birthday party decorations and table setup at Centre Funtastique"
     },
     { 
       id: 8, 
       url: "/assets/images/final_pics/desktop/frozen_theme.webp",
-      mobileUrl: "/assets/images/final_pics/mobile/frozen_theme.webp"
+      mobileUrl: "/assets/images/final_pics/mobile/frozen_theme.webp",
+      alt: "Frozen themed birthday party decorations with blue and white snowflake decor at Centre Funtastique"
     },
     { 
       id: 9, 
       url: "/assets/images/final_pics/desktop/white_theme.webp",
-      mobileUrl: "/assets/images/final_pics/mobile/white_theme.webp"
+      mobileUrl: "/assets/images/final_pics/mobile/white_theme.webp",
+      alt: "Elegant white themed birthday party setup at Centre Funtastique"
     },
     { 
       id: 10, 
       url: "/assets/images/final_pics/desktop/green_theme.webp",
-      mobileUrl: "/assets/images/final_pics/mobile/green_theme.webp"
+      mobileUrl: "/assets/images/final_pics/mobile/green_theme.webp",
+      alt: "Green themed birthday party decorations at Centre Funtastique"
     },
   ];
 
@@ -85,7 +94,7 @@ const Gallery = () => {
             <picture>
               <source media="(max-width: 600px)" srcSet={images[0].mobileUrl} />
               <source media="(min-width: 601px)" srcSet={images[0].url} />
-              <img src={images[0].url} alt="Gallery image 1" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src={images[0].url} alt={images[0].alt} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
             </picture>
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
           </div>
@@ -103,7 +112,7 @@ const Gallery = () => {
             <picture>
               <source media="(max-width: 600px)" srcSet={images[1].mobileUrl} />
               <source media="(min-width: 601px)" srcSet={images[1].url} />
-              <img src={images[1].url} alt="Gallery image 2" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src={images[1].url} alt={images[1].alt} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
             </picture>
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
           </div>
@@ -121,7 +130,7 @@ const Gallery = () => {
             <picture>
               <source media="(max-width: 600px)" srcSet={images[2].mobileUrl} />
               <source media="(min-width: 601px)" srcSet={images[2].url} />
-              <img src={images[2].url} alt="Gallery image 3" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src={images[2].url} alt={images[2].alt} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
             </picture>
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
           </div>
@@ -139,7 +148,7 @@ const Gallery = () => {
             <picture>
               <source media="(max-width: 600px)" srcSet={images[3].mobileUrl} />
               <source media="(min-width: 601px)" srcSet={images[3].url} />
-              <img src={images[3].url} alt="Gallery image 4" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src={images[3].url} alt={images[3].alt} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
             </picture>
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
           </div>
@@ -157,7 +166,7 @@ const Gallery = () => {
             <picture>
               <source media="(max-width: 600px)" srcSet={images[4].mobileUrl} />
               <source media="(min-width: 601px)" srcSet={images[4].url} />
-              <img src={images[4].url} alt="Gallery image 5" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src={images[4].url} alt={images[4].alt} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
             </picture>
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
           </div>
@@ -175,7 +184,7 @@ const Gallery = () => {
             <picture>
               <source media="(max-width: 600px)" srcSet={images[5].mobileUrl} />
               <source media="(min-width: 601px)" srcSet={images[5].url} />
-              <img src={images[5].url} alt="Gallery image 6" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src={images[5].url} alt={images[5].alt} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
             </picture>
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
           </div>
@@ -194,7 +203,7 @@ const Gallery = () => {
             <picture>
               <source media="(max-width: 600px)" srcSet={images[6].mobileUrl} />
               <source media="(min-width: 601px)" srcSet={images[6].url} />
-              <img src={images[6].url} alt="Gallery image 7" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src={images[6].url} alt={images[6].alt} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
             </picture>
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
           </div>
@@ -212,7 +221,7 @@ const Gallery = () => {
             <picture>
               <source media="(max-width: 600px)" srcSet={images[7].mobileUrl} />
               <source media="(min-width: 601px)" srcSet={images[7].url} />
-              <img src={images[7].url} alt="Gallery image 8" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src={images[7].url} alt={images[7].alt} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
             </picture>
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
           </div>
@@ -230,7 +239,7 @@ const Gallery = () => {
             <picture>
               <source media="(max-width: 600px)" srcSet={images[8].mobileUrl} />
               <source media="(min-width: 601px)" srcSet={images[8].url} />
-              <img src={images[8].url} alt="Gallery image 9" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src={images[8].url} alt={images[8].alt} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
             </picture>
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
           </div>
@@ -254,7 +263,7 @@ const Gallery = () => {
             <source media="(min-width: 601px)" srcSet={images[selectedImage].url} />
             <img
               src={images[selectedImage].url}
-              alt={`Gallery image ${images[selectedImage].id}`}
+              alt={images[selectedImage].alt}
               className="max-w-full max-h-[90vh] object-contain rounded-lg animate-scale-in"
             />
           </picture>
