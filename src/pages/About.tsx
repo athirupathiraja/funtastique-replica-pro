@@ -203,7 +203,18 @@ const About = () => {
 
       {/* Crafted By Section */}
       <section className="py-8 px-4 bg-muted/20">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto max-w-4xl text-center space-y-3">
+          <p className="text-sm text-muted-foreground">
+            Proudly featured on{' '}
+            <a 
+              href="https://www.bestinmtl.com/best-birthday-venues-montreal/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-semibold"
+            >
+              Best in MTL - Best Birthday Venues Montreal
+            </a>
+          </p>
           <p className="text-sm text-muted-foreground">
             Website crafted with care by{' '}
             <a 
